@@ -33,4 +33,4 @@ jobs:
 
       - name: Upload files to S3
         run: |
-          aws s3 cp ./homepage_content/ s3://portfolio-page-bucket-danielwrede/ --recursive --acl public-read
+          aws s3 cp ./ s3://portfolio-page-bucket-danielwrede/ --recursive --acl public-read
