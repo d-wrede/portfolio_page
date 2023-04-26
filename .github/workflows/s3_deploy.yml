@@ -34,3 +34,10 @@ jobs:
       - name: Upload files to S3
         run: |
           aws s3 cp ./ s3://portfolio-page-bucket-danielwrede/ --recursive --acl public-read
+
+      - name: Invalidate CloudFront Cache
+        env:
+          DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+
