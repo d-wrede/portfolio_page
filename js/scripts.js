@@ -73,6 +73,15 @@
 	/* Removes Long Focus On Buttons */
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
-	});
+    });
+    
+    /* Collapsible Table */
+    function toggleRow(row) {
+        var content = row.nextElementSibling;
+        if (content) {
+            content.classList.toggle("collapsible-content");
+        }
+    }
+
 
 })(jQuery);
