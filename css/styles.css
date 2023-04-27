@@ -1284,6 +1284,6 @@ a:hover.back-to-top {
 /*     Collaps Table     */
 /*************************/
 
-.collapsible-content {
+.hidden {
 	display: none;
 }

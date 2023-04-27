@@ -76,10 +76,15 @@
     });
     
     /* Collapsible Table */
-    function toggleRow(row) {
-        var content = row.nextElementSibling;
-        if (content) {
-            content.classList.toggle("collapsible-content");
+    window.toggleRow = function (event) {
+        var target = event.target;
+        var toggleId = target.getAttribute('data-toggle');
+        if (toggleId) {
+            var content = document.getElementById(toggleId);
+            if (content) {
+                content.classList.toggle("collapsible-content");
+                target.classList.toggle("hidden");
+            }
         }
     }
 
