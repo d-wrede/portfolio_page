@@ -1,0 +1,51 @@
+AWS Skills:
+    Proficiency in AWS Cloud Development
+    Key services: S3, IAM, VPC, EC2, ELB, ALB, NLB, API Gateway, WAF, Lambda
+    AWS CLI commands and Management Console navigation
+    Familiarity with Boto3 for AWS resource management
+    High Availability, Fault Tolerance, and Backup strategies
+    Creating and managing AWS VPCs, Security Groups, Subnets, and Internet Gateways
+    AWS S3 bucket and object manipulation
+    AWS SNS topic creation and message publishing
+    AWS Rekognition for image analysis and label detection
+    Docker, containerization, and Elastic Container Service (ECS)
+    Terraform for infrastructure as code and resource provisioning
+
+IT Networking:
+    Basic IT knowledge and general understanding of networking concepts, web servers, and databases
+    VPC setup and configuration, subnet management, and security groups
+    Network Access Control Lists (NACLs), Amazon Route 53, and CIDR notation
+    Understanding of public and private IP addresses, ports, and protocols
+
+Programming and Scripting:
+    Proficiency in Python and creating functions for data manipulation
+    Text processing, analysis, and Natural Language Processing (NLP) techniques
+    Python libraries: NumPy, Matplotlib, Jupyter Notebook, MPI4Py, and Cython
+    Other programming languages: Delphi, C(++), R, and Matlab
+
+Algorithms and Optimization:
+    Optimization algorithms, such as CMA-ES
+    Numerical optimization techniques
+    Problem-solving, critical thinking, and adaptability
+
+Software Development and Version Control:
+    Git and GitHub for version control and collaboration
+    Continuous Integration and Deployment with GitHub Actions
+    Experience with Docker Compose and containerization
+    Linux Bash scripting and command line usage
+
+Web Development and Design:
+    HTML and CSS for web content and styling
+    Command-line interfaces and shell scripting on macOS
+    Web browsers, Developer Tools, and troubleshooting
+
+Office and Productivity Tools:
+    Proficient in Microsoft Office Suite (Word, Excel, PowerPoint)
+    Experienced in using Microsoft Project for project management
+    Skilled in creating documents and presentations with LaTeX
+
+Communication and Soft Skills:
+    Effective communication of thoughts, ideas, and questions
+    Supervision of master students on modeling and optimization topics
+    Basic IT knowledge and general understanding of networking concepts, web servers, and databases
+    Problem-solving and troubleshooting skills
