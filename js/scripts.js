@@ -88,5 +88,15 @@
         }
     }
 
+    function reverseText(text) {
+        return text.split("").reverse().join("");
+    }
+
+    window.onload = function () {
+        var emailElement = document.getElementById("email");
+        var reversedEmail = "moc.elpmaxe@nhoj";
+        emailElement.innerHTML = reverseText(reversedEmail);
+    };
+
 
 })(jQuery);
