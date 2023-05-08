@@ -32,6 +32,9 @@ msgerForm.addEventListener("submit", event => {
   appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
   msgerInput.value = "";
 
+  const tempMessage = "Sending your message...";
+  appendMessage(BOT_NAME, BOT_IMG, "left", tempMessage);
+
   sendToAPIGateway(msgText);
 });
 
