@@ -48,6 +48,9 @@ function sendToAPIGateway(msgText) {
     data: JSON.stringify({ message: msgText }),
     contentType: 'application/json; charset=utf-8',
     dataType: 'json',
+    headers: {
+      'x-api-key': 'BaLULOA67K4zLcUnZgSnF2RkfSjedCkY1ZP9UTAR'
+    },
     success: function(response) {
       appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
     },
