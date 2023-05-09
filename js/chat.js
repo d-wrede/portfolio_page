@@ -47,9 +47,9 @@ function sendToAPIGateway(msgText) {
     type: 'POST',
     data: msgText, //JSON.stringify({ message: msgText })
     contentType: 'text/plain; charset=utf-8', //'application/json; charset=utf-8',
-    dataType: 'json', //'json'/'text'
+    dataType: 'text', //'json'/'text'
     success: function(response) {
-      appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
+      appendMessage(BOT_NAME, BOT_IMG, 'left', response);
     },
     error: function(error) {
       console.error('Error:', error);
