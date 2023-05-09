@@ -45,9 +45,9 @@ function sendToAPIGateway(msgText) {
   $.ajax({
     url: apiUrl,
     type: 'POST',
-    data: JSON.stringify({ message: msgText }),
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json',  
+    data: msgText, //JSON.stringify({ message: msgText })
+    contentType: 'text/plain; charset=utf-8', //'application/json; charset=utf-8',
+    dataType: 'text', //'json',  
     success: function(response) {
       appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
     },
@@ -56,7 +56,7 @@ function sendToAPIGateway(msgText) {
     }
   });
 }
-// headers: {'x-api-key': 'BaLULOA67K4zLcUnZgSnF2RkfSjedCkY1ZP9UTAR'},
+
 
 function appendMessage(name, img, side, text) {
   //   Simple solution for small apps
