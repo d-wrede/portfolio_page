@@ -40,7 +40,7 @@ msgerForm.addEventListener("submit", event => {
 
 // Applying AWS API Gateway with Lambda function
 function sendToAPIGateway(msgText) {
-  const apiUrl = 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage';
+  const apiUrl = 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage/message';
 
   $.ajax({
     url: apiUrl,
