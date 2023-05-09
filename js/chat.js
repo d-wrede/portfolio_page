@@ -47,15 +47,16 @@ function sendToAPIGateway(msgText) {
     type: 'POST',
     data: msgText, //JSON.stringify({ message: msgText })
     contentType: 'text/plain; charset=utf-8', //'application/json; charset=utf-8',
-    dataType: 'text', //'json',  
+    dataType: 'json', //'json'/'text'
     success: function(response) {
-      appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
+      appendMessage(BOT_NAME, BOT_IMG, 'left', response);
     },
     error: function(error) {
       console.error('Error:', error);
     }
   });
 }
+// curl -X POST -H "Content-Type: text/plain; charset=utf-8" -H "Origin: https://www.daniel-wrede.de" -d "Your message text here" 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage/message'
 
 
 function appendMessage(name, img, side, text) {
