@@ -47,10 +47,7 @@ function sendToAPIGateway(msgText) {
     type: 'POST',
     data: JSON.stringify({ message: msgText }),
     contentType: 'application/json; charset=utf-8',
-    dataType: 'json',
-    headers: {
-      'x-api-key': 'BaLULOA67K4zLcUnZgSnF2RkfSjedCkY1ZP9UTAR'
-    },
+    dataType: 'json',  
     success: function(response) {
       appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
     },
@@ -59,7 +56,7 @@ function sendToAPIGateway(msgText) {
     }
   });
 }
-
+// headers: {'x-api-key': 'BaLULOA67K4zLcUnZgSnF2RkfSjedCkY1ZP9UTAR'},
 
 function appendMessage(name, img, side, text) {
   //   Simple solution for small apps
