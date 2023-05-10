@@ -41,12 +41,14 @@ msgerForm.addEventListener("submit", event => {
 // Applying AWS API Gateway with Lambda function
 function sendToAPIGateway(msgText) {
   const apiUrl = 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage/message';
+  const uuid = sessionStorage.getItem('uuid') || generateNewUUID(); // Retrieve UUID or generate a new one if not found
+  sessionStorage.setItem('uuid', uuid); // Save the UUID to sessionStorage
 
   $.ajax({
     url: apiUrl,
     type: 'POST',
-    data: msgText, //JSON.stringify({ message: msgText })
-    contentType: 'text/plain; charset=utf-8', //'application/json; charset=utf-8',
+    data: `uuid=${encodeURIComponent(uuid)}&message=${encodeURIComponent(msgText)}`,
+    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     dataType: 'json', //'json'/'text'
     success: function(response) {
       appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
