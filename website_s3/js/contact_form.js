@@ -3,7 +3,7 @@ document.getElementById('contact-form').addEventListener('submit', submitContact
 //});
 
 
-function initSubmitContactForm(event) {
+function submitContactForm(event) {
     event.preventDefault();
 
     const contactApiGatewayUrl = 'https://zlxbi3wpcj.execute-api.eu-central-1.amazonaws.com/chat_api_stage/contact';
