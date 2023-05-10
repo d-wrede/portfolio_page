@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function submitContactForm(event) {
     event.preventDefault();
 
-    const apiUrl = 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage/your-resource';
+    const apiUrl = 'https://x8n9q9d4mg.execute-api.eu-central-1.amazonaws.com/chat_api_stage/contact';
 
     const name = document.getElementById('cname').value;
     const email = document.getElementById('cemail').value;
