@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('contact-form').addEventListener('submit', submitContactForm);
-});
+//document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('contact-form').addEventListener('submit', submitContactForm);
+//});
 
 
-function submitContactForm(event) {
+function initSubmitContactForm(event) {
     event.preventDefault();
 
     const contactApiGatewayUrl = 'https://zlxbi3wpcj.execute-api.eu-central-1.amazonaws.com/chat_api_stage/contact';
