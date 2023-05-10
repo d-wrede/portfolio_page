@@ -29,4 +29,5 @@ function initSubmitContactForm() {
     }
 }
 
-initSubmitContactForm();
+
+document.addEventListener('DOMContentLoaded', SubmitContactForm);
