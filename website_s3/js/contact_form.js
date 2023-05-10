@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
 function submitContactForm(event) {
     event.preventDefault();
 
-    const apiUrl = 'https://x8n9q9d4mg.execute-api.eu-central-1.amazonaws.com/chat_api_stage/contact';
+    const contactApiGatewayUrl = 'https://x8n9q9d4mg.execute-api.eu-central-1.amazonaws.com/chat_api_stage/contact';
 
     const name = document.getElementById('cname').value;
     const email = document.getElementById('cemail').value;
     const message = document.getElementById('cmessage').value;
 
     $.ajax({
-        url: apiUrl,
+        url: contactApiGatewayUrl,
         type: 'POST',
         data: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`,
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
