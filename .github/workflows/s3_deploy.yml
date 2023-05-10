@@ -33,7 +33,7 @@ jobs:
 
       - name: Upload files to S3
         run: |
-          aws s3 cp /website_s3/ s3://www.daniel-wrede.de/ --recursive
+          aws s3 cp ./website_s3/ s3://www.daniel-wrede.de/ --recursive
 
       - name: Invalidate CloudFront Cache
         env:
