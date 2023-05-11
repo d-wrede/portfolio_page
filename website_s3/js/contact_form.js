@@ -1,7 +1,11 @@
-function initSubmitContactForm() {
+function SubmitContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
+        console.log('Form element found.');
+
         contactForm.addEventListener('submit', function (event) {
+            console.log('Form submitted.');
+
             event.preventDefault();
 
             const contactApiGatewayUrl = 'https://zlxbi3wpcj.execute-api.eu-central-1.amazonaws.com/chat_api_stage/contact';
@@ -26,8 +30,9 @@ function initSubmitContactForm() {
                 }
             });
         });
+    } else {
+        console.log('Form element not found.');
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', SubmitContactForm);
