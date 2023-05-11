@@ -1,4 +1,4 @@
-function SubmitContactForm() {
+function submitContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         console.log('Form element found.');
@@ -35,4 +35,4 @@ function SubmitContactForm() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', SubmitContactForm);
+document.addEventListener('DOMContentLoaded', submitContactForm);
