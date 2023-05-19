@@ -4,16 +4,16 @@
  * Licensed under the MIT License (LICENSE.txt)
  */
 
-
-const msgerForm = get(".msger-inputarea");
-const msgerInput = get(".msger-input");
-const msgerChat = get(".msger-chat");
-
 // Icons made by Freepik from www.flaticon.com
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
 const BOT_NAME = "AI Chatbot";
 const PERSON_NAME = "you";
+
+// document.addEventListener("DOMContentLoaded", () => {
+const msgerForm = get(".msger-inputarea");
+const msgerInput = get(".msger-input");
+const msgerChat = get(".msger-chat");
 
 msgerForm.addEventListener("submit", event => {
   event.preventDefault();
@@ -29,7 +29,7 @@ msgerForm.addEventListener("submit", event => {
 
   sendToAPIGateway(msgText);
 });
-
+// });
 // Applying AWS API Gateway with Lambda function
 function sendToAPIGateway(msgText) {
   const chatApiGatewayUrl = 'https://zlxbi3wpcj.execute-api.eu-central-1.amazonaws.com/chat_api_stage/chat';
@@ -88,4 +88,39 @@ function formatDate(date) {
 
 function random(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+
+/* Popup Chat Window */
+
+// function openForm() {
+//   document.getElementById("myForm").style.display = "block";
+// }
+
+// function closeForm() {
+//   document.getElementById("myForm").style.display = "none";
+// }
+
+// function toggleForm() {
+//   const form = document.getElementById("myForm");
+//   if (form.style.display === "none" || form.style.display === "") {
+//     form.style.display = "block";
+//   } else {
+//     form.style.display = "none";
+//   }
+// }
+
+function toggleForm() {
+  const form = document.getElementById("myForm");
+  const toggleButton = document.getElementById("toggleButton");
+
+  if (form.style.display === "none" || form.style.display === "") {
+    form.style.display = "block";
+    toggleButton.textContent = "Close";
+    toggleButton.classList.add("opened");
+  } else {
+    form.style.display = "none";
+    toggleButton.textContent = "Chat";
+    toggleButton.classList.remove("opened");
+  }
 }

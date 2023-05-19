@@ -28,7 +28,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="css/chat.css" href="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -115,48 +115,47 @@
     </header> <!-- end of header -->
     <!-- end of header -->
 
-    <!-- chat interface-->
-    <!-- <div class="chat-popup" id="myForm">
-        <form action="/action_page.php" class="form-container"> -->
-            <section class="msger">
-                <header class="msger-header">
-                    <div class="msger-header-title">
-                        <i class="fas fa-comment-alt"></i> SimpleChat
-                    </div>
-                    <div class="msger-header-options">
+
+    <!-- Chat popup form -->
+    <section class="chat-popup form-popup" id="myForm">
+        <!-- <div class="form-container"> -->
+        <!-- <section class="msger"> -->
+        <div class="msger-header">
+            <div class="msger-header-title">
+                <i class="fas fa-comment-alt"></i> chatGPT assistant
+            </div>
+            <!-- <div class="msger-header-options">
                         <span><i class="fas fa-cog"></i></span>
+                    </div> -->
+        </div>
+
+        <div class="msger-chat">
+            <div class="msg left-msg">
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name"></div>
+                        <div class="msg-info-time">12:45</div>
                     </div>
-                </header>
 
-                <main class="msger-chat">
-                    <div class="msg left-msg">
-                        <div class="msg-img"
-                            style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)">
-                        </div>
-
-                        <div class="msg-bubble">
-                            <div class="msg-info">
-                                <div class="msg-info-name">BOT</div>
-                                <div class="msg-info-time">12:45</div>
-                            </div>
-
-                            <div class="msg-text">
-                                Welcome! I'm your personal assistant, here to help you determine if the job candidate is
-                                the right fit for your open
-                                position. How can I support you in this evaluation process?
-                            </div>
-                        </div>
+                    <div class="msg-text">
+                        Welcome! I'm your personal assistant, here to help you determine if the job candidate is the
+                        right fit for your open position. How can I support you in this evaluation process? (chatGPT 3.5
+                        turbo)
                     </div>
-                </main>
+                </div>
+            </div>
+        </div>
+        <form class="msger-inputarea">
+            <input type="text" class="msger-input" placeholder="Enter your message...">
+            <button type="submit" class="msger-send-btn">Send</button>
+        </form>
+        <!-- </section> -->
+        <!-- </div> -->
+    </section>
+    <!-- Open/close chat button -->
+    <button onclick="toggleForm()" class="open-button" id="toggleButton">Chat</button>
 
-                <form class="msger-inputarea">
-                    <input type="text" class="msger-input" placeholder="Enter your message...">
-                    <button type="submit" class="msger-send-btn">Send</button>
-                </form>
-            </section>
-        <!-- </form>
-    </div> -->
-    <!-- end of chat interface -->
+    <!-- end of chat popup interface -->
 
     <!-- About-->
     <div id="about" class="basic-1 bg-gray">
