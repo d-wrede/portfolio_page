@@ -32,35 +32,35 @@ opacity: 1;
 /* Chat Windows */
 
 /* Chat containers */ 
-.container {
+/* .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
-}
+} */
 
 /* Darker chat container */
-.darker {
+/* .darker {
   border-color: #ccc;
   background-color: #ddd;
-}
+} */
 
 /* Clear floats */
-.container::after {
+/* .container::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
 /* Style images */
-.container img {
+/* .container img {
   float: left;
   max-width: 60px;
   width: 100%;
   margin-right: 20px;
   border-radius: 50%;
-}
+} */
 
 /* Style the right image */
 .container img.right {
