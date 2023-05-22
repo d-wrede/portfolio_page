@@ -3,7 +3,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url('/googlefonts/static/OpenSans-Regular.ttf') format('truetype');
+    src: url('../fonts/googlefonts/static/OpenSans-Regular.ttf') format('truetype');
 }
 
 /* Open Sans 400 Italic */
@@ -11,7 +11,7 @@
     font-family: 'Open Sans';
     font-style: italic;
     font-weight: 400;
-    src: url('/googlefonts/static/OpenSans-Italic.ttf') format('truetype');
+    src: url('../fonts/googlefonts/static/OpenSans-Italic.ttf') format('truetype');
 }
 
 /* Open Sans Semi Bold 600 */
@@ -19,7 +19,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    src: url('/googlefonts/static/OpenSans-SemiBold.ttf') format('truetype');
+    src: url('../fonts/googlefonts/static/OpenSans-SemiBold.ttf') format('truetype');
 }
 
 /* Open Sans Bold 700 */
@@ -27,13 +27,21 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    src: url('/googlefonts/static/OpenSans-Bold.ttf') format('truetype');
+    src: url('../fonts/googlefonts/static/OpenSans-Bold.ttf') format('truetype');
 }
 
-/* Poppins Semi-Bold 600 */
+/* Poppins Semi-Bold 700 */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    src: url('/googlefonts/static/Poppins-SemiBold.ttf') format('truetype');
+    src: url('../fonts/googlefonts/static/Poppins-SemiBold.ttf') format('truetype');
+}
+
+.attribution {
+    font-size: 0.8em;
+    color: #999;
+    text-align: left;
+    /* or "center" or "right", depending on what you prefer */
+    padding-left: 5px;
 }

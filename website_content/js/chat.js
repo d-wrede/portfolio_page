@@ -5,15 +5,37 @@
  */
 
 // Icons made by Freepik from www.flaticon.com
-const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
-const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "AI Chatbot";
+const BOT_IMG = "images/ChatGPT_logo.png";
+const PERSON_IMG = "find a logo";
+const BOT_NAME = "ChatGPT Portfolio Agent";
 const PERSON_NAME = "you";
 
 // document.addEventListener("DOMContentLoaded", () => {
 const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
+
+
+// Disclaimer
+document.getElementById('disclaimer-accept').onclick = function () {
+  document.getElementById('disclaimer').style.display = 'none';
+}
+
+
+// Get the current time and display it in the header
+window.onload = function () {
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+
+  // Pad the minutes with a 0 if it's less than 10
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+
+  document.getElementById('time').textContent = hours + ':' + minutes;
+}
+
 
 msgerForm.addEventListener("submit", event => {
   event.preventDefault();

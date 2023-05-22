@@ -81,7 +81,28 @@ opacity: 1;
   color: #999;
 }
 
-/* other chat box code */
+/* disclaimer */
+.disclaimer-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disclaimer-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
 
 /**
  * Simple Chat UI - CSS
@@ -90,7 +111,7 @@ opacity: 1;
  */
 
 
-/* :root {
+:root {
   --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   --msger-bg: #fff;
   --border: 2px solid #ddd;
@@ -108,7 +129,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-} */
+}
 
 .msger {
   display: flex;

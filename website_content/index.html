@@ -102,10 +102,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h1 class="h1-large">This website is in development. Content and functionality may not be
-                            correct.</h1>
-                        <p>(Welcome to the digital home of a passionate engineer, cloud enthusiast, and
-                            innovative problem solver.)</p>
+                        <h1 class="h1-large">Welcome to the digital home of a passionate engineer, cloud enthusiast, and
+                        innovative problem solver.</h1>
+                        <p>This website is in development. Content and functionality may not be
+                        correct.</p>
                         <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
                         <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
                     </div> <!-- end of text-container -->
@@ -118,11 +118,18 @@
 
     <!-- Chat popup form -->
     <section class="chat-popup form-popup" id="myForm">
-        <!-- <div class="form-container"> -->
-        <!-- <section class="msger"> -->
+        <!-- Disclaimer Overlay -->
+        <div id="disclaimer" class="disclaimer-overlay">
+            <div class="disclaimer-content">
+                <p>Your conversations will be logged for quality assurance and training purposes.</p>
+                <button id="disclaimer-accept">OK</button>
+            </div>
+        </div>
+        <!-- <div class="form-container">
+        <section class="msger"> -->
         <div class="msger-header">
             <div class="msger-header-title">
-                <i class="fas fa-comment-alt"></i> chatGPT assistant
+                <i class="fas fa-comment-alt"></i> OpenAI's chatGPT 3.5 turbo
             </div>
             <!-- <div class="msger-header-options">
                         <span><i class="fas fa-cog"></i></span>
@@ -131,16 +138,17 @@
 
         <div class="msger-chat">
             <div class="msg left-msg">
+                <div class="msg-img" style="background-image: url('images/ChatGPT_logo.png')">
+                </div>
+
                 <div class="msg-bubble">
                     <div class="msg-info">
-                        <div class="msg-info-name"></div>
-                        <div class="msg-info-time">12:45</div>
+                        <div class="msg-info-name">ChatGPT Portfolio Agent</div>
+                        <div id="time" class="msg-info-time">12:45</div>
                     </div>
 
                     <div class="msg-text">
-                        Welcome! I'm your personal assistant, here to help you determine if the job candidate is the
-                        right fit for your open position. How can I support you in this evaluation process? (chatGPT 3.5
-                        turbo)
+                        Hello and welcome! I'm the personal employment agent for Daniel Wrede. I'm delighted to hear that you're interested in Daniel's profile. How can I assist you in getting to know more about Daniel and evaluating his fit for your needs? (chatGPT 3.5 turbo)
                     </div>
                 </div>
             </div>
@@ -149,8 +157,8 @@
             <input type="text" class="msger-input" placeholder="Enter your message...">
             <button type="submit" class="msger-send-btn">Send</button>
         </form>
-        <!-- </section> -->
-        <!-- </div> -->
+        <!-- </section>
+        </div> -->
     </section>
     <!-- Open/close chat button -->
     <button onclick="toggleForm()" class="open-button" id="toggleButton">Chat</button>
@@ -847,6 +855,11 @@
     </div> <!-- end of copyright -->
     <!-- end of copyright -->
 
+    <!-- Attribution Text -->
+    <div class="attribution">
+        Logo by <a href="https://commons.wikimedia.org">Wikimedia Commons</a> is licensed under <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    </div>
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
