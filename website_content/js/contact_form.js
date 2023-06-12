@@ -22,11 +22,12 @@ function submitContactForm() {
                 dataType: 'json',
                 success: function (response) {
                     console.log('Message sent successfully:', response);
-                    // You can add any additional logic here, e.g., display a success message or reset the form
+                    alert('Message sent successfully'); // Alert the user
+                    contactForm.reset(); // Clear the form
                 },
                 error: function (error) {
                     console.error('Error:', error);
-                    // You can add any additional logic here, e.g., display an error message
+                    alert('There was an error sending your message. Please try again later.');
                 }
             });
         });

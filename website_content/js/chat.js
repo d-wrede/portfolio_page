@@ -47,7 +47,8 @@ msgerForm.addEventListener("submit", event => {
   msgerInput.value = "";
 
   const tempMessage = "Sending your message...";
-  appendMessage(BOT_NAME, BOT_IMG, "left", tempMessage);
+  const tempMessageId = "tempMessage";
+  appendMessage(BOT_NAME, BOT_IMG, "left", tempMessage, tempMessageId);
 
   sendToAPIGateway(msgText);
 });
@@ -66,6 +67,8 @@ function sendToAPIGateway(msgText) {
     dataType: 'json', //'json'/'text'
     success: function(response) {
       appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
+      const tempMessageElement = document.getElementById(tempMessageId);
+      if (tempMessageElement) tempMessageElement.remove();
     },
     error: function(error) {
       console.error('Error:', error);
@@ -75,10 +78,30 @@ function sendToAPIGateway(msgText) {
 // curl -X POST -H "Content-Type: text/plain; charset=utf-8" -H "Origin: https://www.daniel-wrede.de" -d "Your message text here" 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage/message'
 
 
-function appendMessage(name, img, side, text) {
-  //   Simple solution for small apps
+// function appendMessage(name, img, side, text) {
+//   //   Simple solution for small apps
+//   const msgHTML = `
+//     <div class="msg ${side}-msg">
+//       <div class="msg-img" style="background-image: url(${img})"></div>
+
+//       <div class="msg-bubble">
+//         <div class="msg-info">
+//           <div class="msg-info-name">${name}</div>
+//           <div class="msg-info-time">${formatDate(new Date())}</div>
+//         </div>
+
+//         <div class="msg-text">${text}</div>
+//       </div>
+//     </div>
+//   `;
+
+//   msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+//   msgerChat.scrollTop += 500;
+// }
+
+function appendMessage(name, img, side, text, id) {
   const msgHTML = `
-    <div class="msg ${side}-msg">
+    <div class="msg ${side}-msg" id="${id || ''}">
       <div class="msg-img" style="background-image: url(${img})"></div>
 
       <div class="msg-bubble">
@@ -95,6 +118,7 @@ function appendMessage(name, img, side, text) {
   msgerChat.insertAdjacentHTML("beforeend", msgHTML);
   msgerChat.scrollTop += 500;
 }
+
 
 // Utils
 function get(selector, root = document) {

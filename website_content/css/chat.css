@@ -155,10 +155,17 @@ html {
 }
 
 .msger-chat {
+  min-height: 20vh;
+  max-height: 50vh; /*600px;*/
   flex: 1;
   overflow-y: auto;
   padding: 10px;
+  /* padding-bottom: 20px; /* Adjust as needed */
 }
+
+
+
+
 
 .msger-chat::-webkit-scrollbar {
   width: 6px;
