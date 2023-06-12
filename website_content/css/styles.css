@@ -395,6 +395,7 @@ input[type='checkbox'] {
 	font-size: 1.875rem;
 	line-height: 1rem;
 	text-decoration: none;
+	margin-left: 95px;
 }
 
 .offcanvas-collapse {
@@ -1206,8 +1207,8 @@ a:hover.back-to-top {
 
 	/* General Styles */
 	.h1-large {
-		font-size: 3.75rem;
-		line-height: 4.625rem;
+		font-size: 3rem;
+		line-height: 4rem;
 	}
 	/* end of general styles */
 
@@ -1287,4 +1288,12 @@ a:hover.back-to-top {
 
 .hidden {
 	display: none;
+}
+
+/* portfolio image */
+
+.image-container img {
+    max-width: 100%; /* Ensures the image doesn't overflow the container */
+    height: auto; /* Keeps the image's aspect ratio */
+    display: block; /* Removes default img margin */
 }

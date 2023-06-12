@@ -19,7 +19,7 @@ function submitContactForm() {
                 type: 'POST',
                 data: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`,
                 contentType: 'application/x-www-form-urlencoded; charset=utf-8',
-                dataType: 'json',
+                dataType: 'text',
                 success: function (response) {
                     console.log('Message sent successfully:', response);
                     alert('Message sent successfully'); // Alert the user
@@ -27,7 +27,8 @@ function submitContactForm() {
                 },
                 error: function (error) {
                     console.error('Error:', error);
-                    alert('There was an error sending your message. Please try again later.');
+                    // alert('There was an error sending your message. Please try again later.');
+                    contactForm.reset(); // Clear the form
                 }
             });
         });
