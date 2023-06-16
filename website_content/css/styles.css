@@ -1297,3 +1297,7 @@ a:hover.back-to-top {
     height: auto; /* Keeps the image's aspect ratio */
     display: block; /* Removes default img margin */
 }
+
+.img-darkened {
+    filter: brightness(0.75);
+}
