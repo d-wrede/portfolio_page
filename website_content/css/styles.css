@@ -142,6 +142,15 @@ a:hover {
 	background-color: #f7f9fb;
 }
 
+.bg-darkgray {
+	background-color: rgba(25, 26, 29, 0.5);
+}
+
+.bg-medgray {
+	background-color: #343a40;
+}
+
+
 .section-divider {
 	display: block;
 	height: 1px;
