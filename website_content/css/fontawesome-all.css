@@ -1800,6 +1800,10 @@ readers do not read off random characters that represent icons */
 .fa-github-square:before {
   content: "\f092"; }
 
+.fa-stack i.fa-github {
+  font-size: 24px; /* Adjust the desired size value */
+}
+
 .fa-gitkraken:before {
   content: "\f3a6"; }
 
@@ -2402,6 +2406,10 @@ readers do not read off random characters that represent icons */
 
 .fa-linkedin-in:before {
   content: "\f0e1"; }
+
+.fa-stack i.fa-linkedin {
+  font-size: 24px; /* Adjust the desired size value */
+}  
 
 .fa-linode:before {
   content: "\f2b8"; }
