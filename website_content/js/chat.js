@@ -101,16 +101,16 @@ function sendToAPIGateway(msgText) {
 
 function appendMessage(name, img, side, text, id) {
   const msgHTML = `
-    <div class="msg ${side}-msg" id="${id || ''}">
-      <div class="msg-img" style="background-image: url(${img})"></div>
+    <div class="msg ${side}-msg dark-font" id="${id || ''}">
+      <div class="msg-img dark-font" style="background-image: url(${img})"></div>
 
       <div class="msg-bubble">
         <div class="msg-info">
-          <div class="msg-info-name">${name}</div>
-          <div class="msg-info-time">${formatDate(new Date())}</div>
+          <div class="msg-info-name dark-font">${name}</div>
+          <div class="msg-info-time dark-font">${formatDate(new Date())}</div>
         </div>
 
-        <div class="msg-text">${text}</div>
+        <div class="msg-text dark-font">${text}</div>
       </div>
     </div>
   `;

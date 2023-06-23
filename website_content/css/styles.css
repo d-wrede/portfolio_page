@@ -109,6 +109,10 @@ h6 {
 	line-height: 1.5rem;
 }
 
+.dark-font {
+    color: #5b5b5b;
+}
+
 .testimonial-text {
 	font-style: italic;
 }
