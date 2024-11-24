@@ -472,6 +472,25 @@ input[type='checkbox'] {
 	color: #9c9ead;
 }
 
+/* Consistent style for language switch to match active nav links */
+.current-language {
+	font-weight: bold;  /* Make it match the active link */
+    pointer-events: none; /* Prevents hover and clicking */
+    color: #9c9ead; /* Ensure it matches the style of active items */
+}
+
+.language-switch .nav-link {
+    padding-top: 0.625rem; /* Match the padding from the main nav items */
+    padding-bottom: 0.625rem;
+    color: #ffffff;        /* Regular link color */
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.language-switch .nav-link:hover {
+    color: #9c9ead;        /* Match hover effect color of navigation items */
+}
+
 /* Dropdown Menu */
 .navbar .dropdown .dropdown-menu {
 	animation: fadeDropdown 0.2s; /* required for the fade animation */
@@ -546,6 +565,12 @@ input[type='checkbox'] {
 	padding: 0;
 	border: none;
 	font-size: 1.25rem;
+}
+
+.language-switch .nav-link.current-language {
+    font-weight: bold;  /* Make it match the active link */
+    pointer-events: none; /* Prevents hover and clicking */
+    color: #9c9ead !important; /* Force the color to apply */
 }
 
 

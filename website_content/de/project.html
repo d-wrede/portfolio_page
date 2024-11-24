@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Daniel Wrede showcasing skills, qualifications, and projects.">
+    <meta name="description" content="Portfolio von Daniel Wrede, das Fähigkeiten, Qualifikationen und Projekte zeigt.">
     <meta name="author" content="Daniel Wrede">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
     <meta property="og:site_name" content="Daniel Wrede Portfolio" />
     <meta property="og:site" content="https://www.daniel-wrede.de" />
-    <meta property="og:title" content="Daniel Wrede - Cloud Developer and Python Engineer" />
-    <meta property="og:description" content="Discover the professional journey, skills, qualifications, and projects of Daniel Wrede, a seasoned cloud developer and Python engineer." />
+    <meta property="og:title" content="Daniel Wrede - Cloud Developer und Python Ingenieur" />
+    <meta property="og:description" content="Entdecken Sie die berufliche Laufbahn, Fähigkeiten, Qualifikationen und Projekte von Daniel Wrede, einem erfahrenen Cloud Developer und Python Ingenieur." />
     <meta property="og:image" content="https://www.daniel-wrede.de/images/Image2_DanielWrede.jpg" />
     <meta property="og:url" content="https://www.daniel-wrede.de" />
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Webpage Title -->
-    <title>Daniel Wrede Portfolio Page</title>
+    <title>Daniel Wrede Portfolio Seite</title>
 
     <!-- Styles -->
     <link href="../css/local-fonts.css" rel="stylesheet">
@@ -63,30 +63,16 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#header">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="index.html#header">Startseite <span class="sr-only">(aktuell)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#about">About</a>
+                        <a class="nav-link page-scroll" href="index.html#about">Über mich</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">Services</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="project.html">Projects</a>
+                        <a class="nav-link page-scroll" href="project.html">Projekte</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Drop</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item page-scroll" href="project.html">Project Details</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
-                        </div>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="index.html#contact">Contact</a>
+                        <a class="nav-link page-scroll" href="index.html#contact">Kontakt</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="impressum.html">Impressum</a>
@@ -107,9 +93,14 @@
                     </span>
                 </span>
 
-                <div class="language-switch ml-4">
-                    <span class="current-language">Deutsch</span> | <a href="../en/project.html">English</a>
-                </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll current-language">Deutsch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="../en/project.html">English</a>
+                    </li>
+                </ul>
                 
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
@@ -122,7 +113,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1>Reference Projects</h1>
+                    <h1>Referenzprojekte</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -135,27 +126,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>AWS Cloud-Based Portfolio Website with ChatGPT Integration</h2>
-                    <p>This project houses the Infrastructure as Code (IaC) necessary for deploying a personal portfolio website on AWS. It employs an array of AWS services and incorporates a real-time chat interface powered by OpenAI's ChatGPT.</p>
-                    <!-- <img class="img-fluid mt-5 mb-3" src="../images/portfolio_webs_infrastructure.png" alt="image of portfolio website infrastructure"> -->
-                    <img class="img-fluid img-darkened mt-5 mb-3" src="../images/portfolio_webs_infrastructure.png" alt="image of portfolio website infrastructure">
+                    <h2>AWS Cloud-basierte Portfolio-Website mit ChatGPT-Integration</h2>
+                    <p>Dieses Projekt beinhaltet die Infrastruktur als Code (IaC), die notwendig ist, um eine persönliche Portfolio-Website auf AWS bereitzustellen. Es nutzt eine Reihe von AWS-Diensten und integriert eine Echtzeit-Chat-Oberfläche, die von OpenAIs ChatGPT unterstützt wird.</p>
+                    <img class="img-fluid img-darkened mt-5 mb-3" src="../images/portfolio_webs_infrastructure.png" alt="Bild der Portfolio-Website-Infrastruktur">
                     
-                    <h3>Overview</h3>
-                    <p>The portfolio website, aside from showcasing work, includes a contact form and a real-time chat interface. Both functionalities are achieved through AWS services, providing a serverless, scalable, and secure solution. Notably, the website caters to both 'www' and non-www redirections through a separate S3 bucket and CloudFront distribution. All buckets are private, with access limited to specific identities and roles.</p>
-                    <h3>Privacy and Implementation</h3>
-                    <p>The design of the website prioritizes user privacy, with no cookies being stored during site usage. This ensures user data privacy and GDPR compliance. Technically, the website's frontend is hosted on an Amazon S3 bucket, with a separate S3 bucket managing redirection for 'www' and non-'www' traffic. All buckets are private and accessible only via specific access identities and roles. The website utilizes AWS services for functionalities like email forwarding and chatbot operation.</p>
-                    <h3>Architecture</h3>
-                    <p>The architecture comprises the following AWS services:</p>
+                    <h3>Überblick</h3>
+                    <p>Die Portfolio-Website zeigt nicht nur Arbeiten, sondern enthält auch ein Kontaktformular und eine Echtzeit-Chat-Oberfläche. Beide Funktionen werden über AWS-Dienste realisiert und bieten eine serverlose, skalierbare und sichere Lösung. Insbesondere unterstützt die Website sowohl 'www' als auch non-www-Weiterleitungen durch einen separaten S3-Bucket und eine CloudFront-Distribution. Alle Buckets sind privat, und der Zugriff ist auf bestimmte Identitäten und Rollen beschränkt.</p>
+                    <h3>Datenschutz und Implementierung</h3>
+                    <p>Das Design der Website priorisiert den Datenschutz der Benutzer, wobei während der Nutzung der Seite keine Cookies gespeichert werden. Dies stellt sicher, dass Benutzerdaten geschützt und DSGVO-konform sind. Technisch wird das Frontend der Website in einem Amazon S3-Bucket gehostet, während ein separater S3-Bucket die Weiterleitung von 'www' und non-'www'-Traffic verwaltet. Alle Buckets sind privat und nur über bestimmte Zugriffsidentitäten und -rollen zugänglich. Die Website nutzt AWS-Dienste für Funktionen wie E-Mail-Weiterleitung und Chatbot-Betrieb.</p>
+                    <h3>Architektur</h3>
+                    <p>Die Architektur umfasst die folgenden AWS-Dienste:</p>
                     <ul>
-                    <li><strong>S3 Buckets:</strong> Host the static website and manage redirections.</li>
-                    <li><strong>CloudFront Distributions:</strong> Cater to content delivery, caching, and HTTPS requests.</li>
-                    <li><strong>Route 53:</strong> Links domain names to the respective resources.</li>
-                    <li><strong>API Gateway:</strong> Triggers the Lambda function corresponding to the request's resource path.</li>
-                    <li><strong>Lambda Functions:</strong> Handles chat interactions (via ChatGPT integration) and forwards emails.</li>
-                    <li><strong>SES (Simple Email Service):</strong> Facilitates email forwarding from the contact form to a personal email account.</li>
-                    <li><strong>Secrets Manager:</strong> Safeguards the ChatGPT API key.</li>
+                    <li><strong>S3-Buckets:</strong> Hostet die statische Website und verwaltet Weiterleitungen.</li>
+                    <li><strong>CloudFront-Distributionen:</strong> Dienen der Inhaltsauslieferung, dem Caching und der HTTPS-Anfragen-Verarbeitung.</li>
+                    <li><strong>Route 53:</strong> Verknüpft Domainnamen mit den jeweiligen Ressourcen.</li>
+                    <li><strong>API Gateway:</strong> Löst die Lambda-Funktion entsprechend dem Ressource-Pfad der Anfrage aus.</li>
+                    <li><strong>Lambda-Funktionen:</strong> Handhabt Chat-Interaktionen (über ChatGPT-Integration) und leitet E-Mails weiter.</li>
+                    <li><strong>SES (Simple Email Service):</strong> Ermöglicht die E-Mail-Weiterleitung vom Kontaktformular zu einem persönlichen E-Mail-Konto.</li>
+                    <li><strong>Secrets Manager:</strong> Schützt den ChatGPT API-Schlüssel.</li>
                     </ul>
-                    <p>You can access the associated Terraform code in this <a class="blue" href="https://github.com/d-wrede/AWS_capstone_project" target="_blank">GitHub repository</a>.</p>
+                    <p>Den zugehörigen Terraform-Code finden Sie in diesem <a class="blue" href="https://github.com/d-wrede/AWS_capstone_project" target="_blank">GitHub Repository</a>.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -167,72 +157,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Professional Portfolio Website</h2>
-                    <p>This project encompasses the codebase for a professional portfolio website designed to effectively showcase the individual's background, skills, projects, and provide an intuitive contact form. The aim is to deliver a user-friendly and engaging platform to highlight the professional journey and accomplishments.</p>
+                    <h2>Portfolio-Website</h2>
+                    <p>Dieses Projekt umfasst den Code für eine Portfolio-Website, die entwickelt wurde, um den beruflichen Hintergrund, die Fähigkeiten, Projekte sowie ein intuitives Kontaktformular effektiv darzustellen. Ziel ist es, eine benutzerfreundliche und ansprechende Plattform zu bieten, um die berufliche Laufbahn und die Erfolge hervorzuheben.</p>
 
-                    <h3>Structure and Content</h3>
-                    <p>The website is organized into five main sections: </p>
+                    <h3>Struktur und Inhalt</h3>
+                    <p>Die Website ist in fünf Hauptbereiche unterteilt: </p>
                     <ul>
-                        <li><strong>Home:</strong> Presents a brief introduction and primary career highlights.</li>
-                        <li><strong>About:</strong> Provides detailed insight into the individual's background, skills, qualifications, and unique value proposition.</li>
-                        <li><strong>Resume:</strong> Offers a comprehensive account of academic history, professional experience, certifications, and other relevant details.</li>
-                        <li><strong>Projects:</strong> Showcases a variety of projects executed, demonstrating practical experience and expertise.</li>
-                        <li><strong>Contact:</strong> Allows visitors to get in touch via a form, which triggers an automated email through AWS Simple Email Service (SES) upon submission.</li>
+                        <li><strong>Startseite:</strong> Stellt eine kurze Einführung und die wichtigsten Karrierehöhepunkte vor.</li>
+                        <li><strong>Über mich:</strong> Bietet detaillierte Einblicke in den beruflichen Hintergrund, die Fähigkeiten, Qualifikationen und den einzigartigen Mehrwert.</li>
+                        <li><strong>Lebenslauf:</strong> Bietet eine umfassende Darstellung der akademischen Laufbahn, beruflichen Erfahrung, Zertifikate und anderer relevanter Details.</li>
+                        <li><strong>Projekte:</strong> Präsentiert eine Vielzahl von durchgeführten Projekten, die praktische Erfahrung und Expertise demonstrieren.</li>
+                        <li><strong>Kontakt:</strong> Ermöglicht Besuchern, sich über ein Formular in Verbindung zu setzen, das beim Absenden eine automatisierte E-Mail über AWS Simple Email Service (SES) auslöst.</li>
                     </ul>
-                    <p>An integrated chat interface, powered by OpenAI's GPT-4 model, enhances the user experience by offering a dynamic way to learn more about the individual's profile. The website design is clean, modern, and user-friendly, providing a seamless experience across various devices and platforms.</p>
+                    <p>Eine integrierte Chat-Oberfläche, die von OpenAIs GPT-4-Modell unterstützt wird, verbessert die Benutzererfahrung, indem sie eine dynamische Möglichkeit bietet, mehr über das Profil zu erfahren. Das Design der Website ist sauber, modern und benutzerfreundlich und bietet eine nahtlose Erfahrung auf verschiedenen Geräten und Plattformen.</p>
 
-                    <h3>Source Files</h3>
-                    <p>For the website's source files (HTML, CSS, JS, etc.), please refer to this <a class="blue" href="https://github.com/d-wrede/portfolio_page" target="_blank">Portfolio Page Repository</a>.</p>
+                    <h3>Quellcode</h3>
+                    <p>Für die Quellcode-Dateien der Website (HTML, CSS, JS, usw.) besuchen Sie bitte dieses <a class="blue" href="https://github.com/d-wrede/portfolio_page" target="_blank">Portfolio Page Repository</a>.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-1 -->
     <!-- end of basic -->
-
-
-    <!-- 
-    <div id="event_aggregation" class="ex-basic-1 pt-5 pb-5 bg-gray2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Event Aggregation Project</h2>
-                    <p>This project enhances the readability and accessibility of event announcements in Telegram channels by parsing event invitations, extracting critical information, and compiling a chronological summary.</p>
-                    <div class="d-flex justify-content-center mb-3">
-                        <div class="image-container" style="width: 30%;">
-                            <a>
-                                <img id="custom-img" class="img-fluid img-darkened" src="../images/dallE_eventAggregation.png" alt="event_aggregation">
-                            </a>
-                        </div> 
-                    </div> 
-                    <h3>Overview</h3>
-                    <p>The current version supports the German language but is designed to be language-agnostic, given the availability of language packages for the underlying algorithms. The event data extraction is precise and reliable, thanks to the use of regular expressions. The system is primarily designed for high-frequency event announcement channels on Telegram.</p>
-
-                    <h3>Implementation and Future Direction</h3>
-                    <p>Topic extraction uses a combination of NLP algorithms, and their parameters are optimized using the Covariance Matrix Adaptation Evolution Strategy (CMA-ES). Our immediate focus is on stabilizing this parameter optimization process. Moving ahead, our plans include automating event overview messages to Telegram channels, regular updates of event announcements, enhanced bot functionality for group invitations, and scheduling regular runs of the project with AWS CloudWatch.</p>
-
-                    <p>For more in-depth insights and potential contributions, feel free to visit the <a class="blue" href="https://github.com/d-wrede/event_aggregation" target="_blank">GitHub repository</a>.</p>
-                </div> 
-            </div> 
-        </div> 
-    </div> end of ex-basic-1
-    -->
-
-    
-    
-
 
     <!-- Basic -->
     <div class="ex-basic-1 pt-3 pb-5 bg-gray1">
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <a class="btn-solid-reg mb-5" href="index.html">Back</a>
+                    <a class="btn-solid-reg mb-5" href="index.html">Zur Startseite</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-1 -->
     <!-- end of basic -->
-
 
     <!-- Footer -->
     <div class="footer bg-gray">
@@ -259,24 +216,9 @@
     </div> <!-- end of footer -->
     <!-- end of footer -->
 
-
-    <!-- Copyright -->
-    <!-- <div class="copyright bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Distributed By <a class="no-line" href="https://themewagon.com/">Themewagon</a>
-                    </p> -->
-                <!-- </div> end of col -->
-            <!-- </div> enf of row -->
-        <!-- </div> end of container -->
-
-    <!-- </div> end of copyright -->
-    <!-- end of copyright -->
-
     <!-- Attribution Text -->
     <div class="attribution">
-        Logo by <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a> is licensed under <a
+        Logo von <a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a> ist lizenziert unter <a
             href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
     </div>
 
