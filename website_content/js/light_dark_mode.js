@@ -22,12 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Ensure clicking labels updates the toggle
-    const labels = document.querySelectorAll(".theme-label");
-    labels.forEach((label) => {
-        label.addEventListener("click", () => {
-            themeToggle.checked = !themeToggle.checked;
-            themeToggle.dispatchEvent(new Event("change")); // Trigger the theme change
-        });
+    // Ensure clicking "Hell" or "Dunkel" switches appropriately
+    const lightLabel = document.querySelector("#light-label");
+    const darkLabel = document.querySelector("#dark-label");
+
+    lightLabel.addEventListener("click", () => {
+        if (toggleSwitch.checked) { // Only switch if currently in dark mode
+            toggleSwitch.checked = false;
+            toggleSwitch.dispatchEvent(new Event("change")); // Trigger the theme change
+        }
+    });
+
+    darkLabel.addEventListener("click", () => {
+        if (!toggleSwitch.checked) { // Only switch if currently in light mode
+            toggleSwitch.checked = true;
+            toggleSwitch.dispatchEvent(new Event("change")); // Trigger the theme change
+        }
     });
 });
