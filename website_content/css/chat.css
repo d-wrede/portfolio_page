@@ -2,12 +2,14 @@
 
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
-  background-color: #555;
+  background-color: var(--color-topnavbar);
+  /* #555; */
   color: white;
   padding: 8px 8px;
   border: none;
   cursor: pointer;
-  opacity: 0.8;
+  z-index: 8;
+  opacity: 0.9;
   position: fixed;
   bottom: 12px;
   right: 60px;
