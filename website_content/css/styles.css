@@ -843,6 +843,7 @@ input[type='checkbox'] {
 /*     Works     */
 /*****************/
 .basic-4 {
+	padding-top: 2rem;
 	padding-bottom: 1rem;
 }
 
@@ -1526,4 +1527,15 @@ input:checked + .theme-slider:before {
     display: flex;
     align-items: center;
     gap: 0.0rem; /* Space between the slider and labels */
+}
+
+ul {
+    list-style-type: disc; /* Standard Bullet-Points */
+    margin: 0; /* Entfernt äußeren Rand */
+    padding-left: 40px; /* Abstand der Bullet-Points nach rechts erhöhen */
+}
+
+li {
+    margin-bottom: 6px; /* Vertikaler Abstand zwischen Punkten */
+    line-height: 1.6; /* Bessere Lesbarkeit */
 }

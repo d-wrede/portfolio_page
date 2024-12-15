@@ -98,5 +98,13 @@
         emailElement.innerHTML = reverseText(reversedEmail);
     };
 
-
 })(jQuery);
+
+function toggleText(button) {
+    // Text aus data-attributes holen
+    const textOpen = button.getAttribute("data-text-open");
+    const textClose = button.getAttribute("data-text-close");
+
+    // Toggle Text zwischen open und close
+    button.innerText = button.innerText === textOpen ? textClose : textOpen;
+}
