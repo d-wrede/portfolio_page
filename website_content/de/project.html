@@ -121,8 +121,114 @@
     <!-- end of header -->
 
 
+    <div id="energy-concept" class="ex-basic-1 pt-5 pb-5 bg-gray2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Energiekonzept Sonnenwald</h2>
+                    <p>Nachhaltige Energieversorgung für eine Anlage mit 900 kW thermischer Leistung</p>
+                    <h3>Projektumfang:</h3>
+                    <p>In der Gemeinschaft Sonnenwald, bestehend aus ca. 70 Bewohnern, wurde ein Energiekonzept zur CO₂-Reduktion und Kostensenkung entwickelt. Die Gemeinschaft liegt in Schernbach im nördlichen Schwarzwald und verteilt sich auf zwei Bereiche:</p>
+                    <ul>
+                        <li><strong>Oberer Hof:</strong> Hauptteil der Wohngebäude, Industrieküche, Turnhalle, Werkstätten, ehemaliges Schwimmbad und ein bestehendes Nahwärmenetz.</li>
+                        <li><strong>Unterer Hof:</strong> Zwei Wohngebäude (eins für Seminarbetrieb) sowie ungenutzte, nicht beheizte Ställe und landwirtschaftliche Gebäude.</li>
+                    </ul>
+
+                    <div style="text-align: center;">
+                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/uebersicht_gemeinsame_versorgung.png" alt="Szenario 1: Gemeinsame Versorgung. Erstellt auf Basis einer Abschlussarbeit von Daniel Schaake.">
+                    </div>
+
+                    <h3>Ausgangslage:</h3>
+                    <p>Die bisherige Wärmeversorgung basierte auf einer zentralen 900 kW-Ölheizung am oberen Hof sowie dezentralen Ölheizungen am unteren Hof. Ziel war es, eine nachhaltige Alternative zu entwickeln. Die Analyse zeigte Hackschnitzel als den ökologisch sinnvollsten Energieträger. Optionen wie Energieholz aus dem Wald oder Papiermatsch wurden aufgrund technischer Herausforderungen ausgeschlossen. Photovoltaikflächen waren begrenzt verfügbar.</p>
+
+                    <h3>Szenarien der Energieversorgung:</h3>
+                    <p>Im Rahmen des Forschungsprojekts SmartBioGrid (TU Dresden, Institut für Energietechnik) wurden zwei Szenarien untersucht:</p>
+                    <h4>1. Szenario 1 – Gemeinsame Versorgung</h4>
+                    <ul>
+                        <li>Heizzentrale am unteren Hof</li>
+                        <li>Wärmeleitung zum oberen Hof</li>
+                        <li>Nutzung der PV-Flächen am unteren Hof</li>
+                        <li>Vorteile: zentrale Energieversorgung, optimierte Flächennutzung</li>
+                        <li>Nachteile: Wärmeverluste, Bauaufwand der Wärme- und Stromleitung</li>
+                    </ul>
+                    <h4>2. Szenario 2 – Getrennte Versorgung</h4>
+                    <ul>
+                        <li>Heizzentrale am oberen Hof für bestehendes Nahwärmenetz</li>
+                        <li>Pelletheizung für den unteren Hof</li>
+                        <li>Vorteile: dezentrale Versorgung, weniger baulicher Aufwand</li>
+                        <li>Nachteile: begrenzte Flächen am oberen Hof</li>
+                    </ul>
+
+                    <h3>Technologien im Vergleich:</h3>
+                    <ul>
+                        <li>Hackschnitzelheizung</li>
+                        <li>Wärmespeicher für obere und untere Höfe</li>
+                        <li>Wärmepumpe</li>
+                        <li>Zusätzliche PV-Anlagen (je nach Szenario)</li>
+                        <li>Pelletheizung (nur für getrennte Versorgung)</li>
+                    </ul>
+                    <p>Die Optimierung erfolgte mit dem Optimierungsframework FlixOpt (TU Dresden).</p>
+
+                    <div style="text-align: center;">
+                        <img style="width: 50%; height: auto; margin: 15px;" src="../images/energieversorgungssystem.png" alt="Energieversorgungssystem. Quelle: TU Dresden, FlixOpt (https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/flixopt).">
+                    </div>
+
+                    <h3>Ergebnisse:</h3>
+                    <p>Die Optimierungsergebnisse für Szenario 1 und Szenario 2 sind in der untenstehenden Abbildung dargestellt. Beide Szenarien setzen auf eine Kombination aus Blockheizkraftwerk (BHKW) und Wärmepumpe.</p>
+                    <ul>
+                        <li><strong>Szenario 2 – Getrennte Versorgung:</strong> Die Gebäude am unteren Hof werden jeweils mit einer Pelletheizung ausgestattet.</li>
+                        <li><strong>Szenario 1 – Gemeinsame Versorgung:</strong> Die PV-Flächen des unteren Hofes werden umfassend genutzt, um den erzeugten Strom für die Wärmepumpe und weitere Verbraucher am oberen Hof bereitzustellen.</li>
+                    </ul>
+                    <p>Die vorhandenen PV-Flächen wurden in beiden Varianten nur teilweise genutzt und ausschließlich in südlicher Ausrichtung installiert.</p>
+
+                    <div style="text-align: center;">
+                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/vergleich_technologien.png" alt="Vergleich der Technologien. Erstellt auf Basis der Berechnungsergebnisse in Excel.">
+                    </div>
+
+                    <h3>Entscheidung der Gemeinschaft Sonnenwald:</h3>
+                    <p>Aufgrund der vergleichbaren Kosten, des geringeren baulichen Aufwands und bürokratischer Hürden für die Wärme- und Stromleitung entschied sich die Gemeinschaft für Szenario 2 – getrennte Versorgung.</p>
+                    <table class="table table-striped mt-4">
+                        <thead>
+                        <tr>
+                            <th>Kostenart</th>
+                            <th>Szenario 1 – gemeinsam</th>
+                            <th>Szenario 2 – getrennt</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Investitionskosten</td>
+                            <td>42.965 €</td>
+                            <td>34.913 €</td>
+                        </tr>
+                        <tr>
+                            <td>Operationskosten</td>
+                            <td>64.620 €</td>
+                            <td>69.093 €</td>
+                        </tr>
+                        <tr>
+                            <td>Gesamtkosten</td>
+                            <td>107.585 €</td>
+                            <td>104.006 €</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Ursachen für die geringen Unterschiede:</strong></p>
+                    <ul>
+                        <li>Wärmeverluste der Leitung zwischen den Höfen</li>
+                        <li>Höherer Bauaufwand bei Szenario 1</li>
+                        <li>PV-Nutzung am unteren Hof entfiel bei Szenario 1</li>
+                    </ul>
+
+                    <p>Weitere Informationen und detaillierte Ergebnisse sind im Projektbericht der TU Dresden verfügbar: <a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/smart_bio_grid" target="_blank">SmartBioGrid</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Basic -->
-    <div id="aws-portfolio" class="ex-basic-1 pt-5 pb-5 bg-gray2">
+    <div id="aws-portfolio" class="ex-basic-1 pt-5 pb-5 bg-gray1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -153,7 +259,7 @@
     <!-- end of basic -->
 
     <!-- Basic -->
-    <div id="portfo_front" class="ex-basic-1 pt-5 pb-5 bg-gray1">
+    <div id="portfo_front" class="ex-basic-1 pt-5 pb-5 bg-gray2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
