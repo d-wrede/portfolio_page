@@ -121,157 +121,169 @@
     <!-- end of header -->
 
 
-    <div id="energy-concept" class="ex-basic-1 pt-5 pb-5 bg-gray2">
+    <div id="accordion" class="ex-basic-1 pt-5 pb-5 bg-gray2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Energiekonzept Sonnenwald</h2>
-                    <p>Nachhaltige Energieversorgung für eine Anlage mit 900 kW thermischer Leistung</p>
-                    <h3>Projektumfang:</h3>
+                    <h2>Energiekonzept Sonnenwald Gemeinschaft</h2>
+                    <p>Konzeptionierung einer nachhaltigen Energieversorgung für eine Anlage mit 900 kW thermischer Leistung</p>
+                    <h3>Projektumfang</h3>
                     <p>In der Gemeinschaft Sonnenwald, bestehend aus ca. 70 Bewohnern, wurde ein Energiekonzept zur CO₂-Reduktion und Kostensenkung entwickelt. Die Gemeinschaft liegt in Schernbach im nördlichen Schwarzwald und verteilt sich auf zwei Bereiche:</p>
                     <ul>
                         <li><strong>Oberer Hof:</strong> Hauptteil der Wohngebäude, Industrieküche, Turnhalle, Werkstätten, ehemaliges Schwimmbad und ein bestehendes Nahwärmenetz.</li>
                         <li><strong>Unterer Hof:</strong> Zwei Wohngebäude (eins für Seminarbetrieb) sowie ungenutzte, nicht beheizte Ställe und landwirtschaftliche Gebäude.</li>
                     </ul>
 
-<!--                    <div style="text-align: center;">-->
-<!--                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/uebersicht_gemeinsame_versorgung.png" alt="Szenario 1: Gemeinsame Versorgung. Erstellt auf Basis einer Abschlussarbeit von Daniel Schaake.">-->
-<!--                    </div>-->
-
                     <div style="text-align: center;">
-                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/uebersicht_gemeinsame_versorgung.png" alt="Szenario 1: Gemeinsame Versorgung">
+                        <img style="width: 100%; height: auto; margin: 15px;" src="../images/uebersicht_gemeinsame_versorgung.png" alt="Szenario 1: Gemeinsame Versorgung">
                         <p style="font-size: 14px; color: #555;">Abbildung 1: Szenario 1 – Gemeinsame Versorgung. Erstellt auf Basis einer Abschlussarbeit von Daniel Schaake.</p>
                     </div>
 
-                    <h3>Ausgangslage:</h3>
-                    <p>Die bisherige Wärmeversorgung basierte auf einer zentralen 900 kW-Ölheizung am oberen Hof sowie dezentralen Ölheizungen am unteren Hof. Ziel war es, eine nachhaltige Alternative zu entwickeln. Die Analyse zeigte Hackschnitzel als den ökologisch sinnvollsten Energieträger. Optionen wie Energieholz aus dem Wald oder Papiermatsch wurden aufgrund technischer Herausforderungen ausgeschlossen. Photovoltaikflächen waren begrenzt verfügbar.</p>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapseEnergy" aria-expanded="false"
+                                aria-controls="collapseEnergy"
+                                onclick="toggleText(this)"
+                                data-text-open="mehr" data-text-close="weniger">
+                            mehr
+                        </button>
+                    </h5>
 
-                    <h3>Szenarien der Energieversorgung:</h3>
-                    <p>Im Rahmen des Forschungsprojekts SmartBioGrid (TU Dresden, Institut für Energietechnik) wurden zwei Szenarien untersucht:</p>
-                    <h4>1. Szenario 1 – Gemeinsame Versorgung</h4>
-                    <ul>
-                        <li>Heizzentrale am unteren Hof</li>
-                        <li>Wärmeleitung zum oberen Hof</li>
-                        <li>Nutzung der PV-Flächen am unteren Hof</li>
-                        <li>Vorteile: zentrale Energieversorgung, optimierte Flächennutzung</li>
-                        <li>Nachteile: Wärmeverluste, Bauaufwand der Wärme- und Stromleitung</li>
-                    </ul>
-                    <h4>2. Szenario 2 – Getrennte Versorgung</h4>
-                    <ul>
-                        <li>Heizzentrale am oberen Hof für bestehendes Nahwärmenetz</li>
-                        <li>Pelletheizung für den unteren Hof</li>
-                        <li>Vorteile: dezentrale Versorgung, weniger baulicher Aufwand</li>
-                        <li>Nachteile: begrenzte Flächen am oberen Hof</li>
-                    </ul>
+                    <div id="collapseEnergy" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <h3>Ausgangslage</h3>
+                        <p>Die bisherige Wärmeversorgung basierte auf einer zentralen 900 kW-Ölheizung am oberen Hof sowie dezentralen Ölheizungen am unteren Hof. Ziel war es, eine nachhaltige Alternative zu entwickeln. Die Analyse zeigte Hackschnitzel als den ökologisch sinnvollsten Energieträger. Optionen wie Energieholz aus dem Wald oder Papiermatsch wurden aufgrund technischer Herausforderungen ausgeschlossen. Photovoltaikflächen waren begrenzt verfügbar.</p>
 
-                    <h3>Technologien im Vergleich:</h3>
-                    <ul>
-                        <li>Hackschnitzelheizung</li>
-                        <li>Wärmespeicher für obere und untere Höfe</li>
-                        <li>Wärmepumpe</li>
-                        <li>Zusätzliche PV-Anlagen (je nach Szenario)</li>
-                        <li>Pelletheizung (nur für getrennte Versorgung)</li>
-                    </ul>
-                    <p>Die Optimierung erfolgte mit dem Optimierungsframework FlixOpt (TU Dresden).</p>
+                        <h3>Szenarien der Energieversorgung</h3>
+                        <p>Im Rahmen des Forschungsprojekts SmartBioGrid (TU Dresden, Institut für Energietechnik) wurden zwei Szenarien untersucht:</p>
+                        <h4>1. Szenario 1 – Gemeinsame Versorgung</h4>
+                        <ul>
+                            <li>Heizzentrale am unteren Hof</li>
+                            <li>Wärmeleitung zum oberen Hof</li>
+                            <li>Nutzung der PV-Flächen am unteren Hof</li>
+                            <li>Vorteile: zentrale Energieversorgung, optimierte Flächennutzung</li>
+                            <li>Nachteile: Wärmeverluste, Bauaufwand der Wärme- und Stromleitung</li>
+                        </ul>
+                        <h4>2. Szenario 2 – Getrennte Versorgung</h4>
+                        <ul>
+                            <li>Heizzentrale am oberen Hof für bestehendes Nahwärmenetz</li>
+                            <li>Pelletheizung für den unteren Hof</li>
+                            <li>Vorteile: dezentrale Versorgung, weniger baulicher Aufwand</li>
+                            <li>Nachteile: begrenzte Flächen am oberen Hof</li>
+                        </ul>
 
-<!--                    <div style="text-align: center;">-->
-<!--                        <img style="width: 50%; height: auto; margin: 15px;" src="../images/energieversorgungssystem.png" alt="Energieversorgungssystem. Quelle: TU Dresden, FlixOpt (https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/flixopt).">-->
-<!--                    </div>-->
+                        <h3>Technologien im Vergleich</h3>
+                        <ul>
+                            <li>Hackschnitzelheizung</li>
+                            <li>Wärmespeicher für obere und untere Höfe</li>
+                            <li>Wärmepumpe</li>
+                            <li>Zusätzliche PV-Anlagen (je nach Szenario)</li>
+                            <li>Pelletheizung (nur für getrennte Versorgung)</li>
+                        </ul>
+                        <p>Die Optimierung erfolgte mit dem Optimierungsframework FlixOpt (TU Dresden).</p>
 
-                    <div style="text-align: center;">
-                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/energieversorgungssystem.png" alt="Energieversorgungssystem">
-                        <p style="font-size: 14px; color: #555;">Abbildung 2: Energieversorgungssystem. Quelle: TU Dresden, FlixOpt (<a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/flixopt" target="_blank">Link zur Quelle</a>).</p>
+                        <div style="text-align: center;">
+                            <img style="width: 80%; height: auto; margin: 15px;" src="../images/energieversorgungssystem.png" alt="Energieversorgungssystem">
+                            <p style="font-size: 14px; color: #555;">Abbildung 2: Energieversorgungssystem. Quelle: TU Dresden, FlixOpt (<a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/flixopt" target="_blank">Link zur Quelle</a>).</p>
+                        </div>
+
+                        <h3>Ergebnisse</h3>
+                        <p>Die Optimierungsergebnisse für Szenario 1 und Szenario 2 sind in der untenstehenden Abbildung dargestellt. Beide Szenarien setzen auf eine Kombination aus Blockheizkraftwerk (BHKW) und Wärmepumpe.</p>
+                        <ul>
+                            <li><strong>Szenario 2 – Getrennte Versorgung:</strong> Die Gebäude am unteren Hof werden jeweils mit einer Pelletheizung ausgestattet.</li>
+                            <li><strong>Szenario 1 – Gemeinsame Versorgung:</strong> Die PV-Flächen des unteren Hofes werden umfassend genutzt, um den erzeugten Strom für die Wärmepumpe und weitere Verbraucher am oberen Hof bereitzustellen.</li>
+                        </ul>
+                        <p>Die vorhandenen PV-Flächen wurden in beiden Varianten nur teilweise genutzt und ausschließlich in südlicher Ausrichtung installiert.</p>
+
+                        <div style="text-align: center;">
+                            <img style="width: 80%; height: auto; margin: 15px;" src="../images/vergleich_technologien.png" alt="Vergleich der Technologien">
+                            <p style="font-size: 14px; color: #555;">Abbildung 3: Vergleich der Technologien. Erstellt auf Basis der Berechnungsergebnisse in Excel.</p>
+                        </div>
+
+                        <h3>Entscheidung der Gemeinschaft Sonnenwald</h3>
+                        <p>Aufgrund der vergleichbaren Kosten, des geringeren baulichen Aufwands und bürokratischer Hürden für die Wärme- und Stromleitung entschied sich die Gemeinschaft für Szenario 2 – getrennte Versorgung.</p>
+                        <table class="table table-striped mt-4">
+                            <thead>
+                            <tr>
+                                <th>Kostenart</th>
+                                <th>Szenario 1 – gemeinsam</th>
+                                <th>Szenario 2 – getrennt</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Investitionskosten</td>
+                                <td>42.965 €</td>
+                                <td>34.913 €</td>
+                            </tr>
+                            <tr>
+                                <td>Operationskosten</td>
+                                <td>64.620 €</td>
+                                <td>69.093 €</td>
+                            </tr>
+                            <tr>
+                                <td>Gesamtkosten</td>
+                                <td>107.585 €</td>
+                                <td>104.006 €</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Ursachen für die geringen Unterschiede:</strong></p>
+                        <ul>
+                            <li>Wärmeverluste der Leitung zwischen den Höfen</li>
+                            <li>Höherer Bauaufwand bei Szenario 1</li>
+                            <li>PV-Nutzung am unteren Hof entfiel bei Szenario 1</li>
+                        </ul>
+
+                        <p>Weitere Informationen und detaillierte Ergebnisse sind im Projektbericht der TU Dresden verfügbar: <a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/smart_bio_grid" target="_blank">SmartBioGrid</a>.</p>
                     </div>
-
-                    <h3>Ergebnisse:</h3>
-                    <p>Die Optimierungsergebnisse für Szenario 1 und Szenario 2 sind in der untenstehenden Abbildung dargestellt. Beide Szenarien setzen auf eine Kombination aus Blockheizkraftwerk (BHKW) und Wärmepumpe.</p>
-                    <ul>
-                        <li><strong>Szenario 2 – Getrennte Versorgung:</strong> Die Gebäude am unteren Hof werden jeweils mit einer Pelletheizung ausgestattet.</li>
-                        <li><strong>Szenario 1 – Gemeinsame Versorgung:</strong> Die PV-Flächen des unteren Hofes werden umfassend genutzt, um den erzeugten Strom für die Wärmepumpe und weitere Verbraucher am oberen Hof bereitzustellen.</li>
-                    </ul>
-                    <p>Die vorhandenen PV-Flächen wurden in beiden Varianten nur teilweise genutzt und ausschließlich in südlicher Ausrichtung installiert.</p>
-
-<!--                    <div style="text-align: center;">-->
-<!--                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/vergleich_technologien.png" alt="Vergleich der Technologien. Erstellt auf Basis der Berechnungsergebnisse in Excel.">-->
-<!--                    </div>-->
-
-                    <div style="text-align: center;">
-                        <img style="width: 80%; height: auto; margin: 15px;" src="../images/vergleich_technologien.png" alt="Vergleich der Technologien">
-                        <p style="font-size: 14px; color: #555;">Abbildung 3: Vergleich der Technologien. Erstellt auf Basis der Berechnungsergebnisse in Excel.</p>
-                    </div>
-
-                    <h3>Entscheidung der Gemeinschaft Sonnenwald:</h3>
-                    <p>Aufgrund der vergleichbaren Kosten, des geringeren baulichen Aufwands und bürokratischer Hürden für die Wärme- und Stromleitung entschied sich die Gemeinschaft für Szenario 2 – getrennte Versorgung.</p>
-                    <table class="table table-striped mt-4">
-                        <thead>
-                        <tr>
-                            <th>Kostenart</th>
-                            <th>Szenario 1 – gemeinsam</th>
-                            <th>Szenario 2 – getrennt</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Investitionskosten</td>
-                            <td>42.965 €</td>
-                            <td>34.913 €</td>
-                        </tr>
-                        <tr>
-                            <td>Operationskosten</td>
-                            <td>64.620 €</td>
-                            <td>69.093 €</td>
-                        </tr>
-                        <tr>
-                            <td>Gesamtkosten</td>
-                            <td>107.585 €</td>
-                            <td>104.006 €</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <p><strong>Ursachen für die geringen Unterschiede:</strong></p>
-                    <ul>
-                        <li>Wärmeverluste der Leitung zwischen den Höfen</li>
-                        <li>Höherer Bauaufwand bei Szenario 1</li>
-                        <li>PV-Nutzung am unteren Hof entfiel bei Szenario 1</li>
-                    </ul>
-
-                    <p>Weitere Informationen und detaillierte Ergebnisse sind im Projektbericht der TU Dresden verfügbar: <a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/smart_bio_grid" target="_blank">SmartBioGrid</a>.</p>
-
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Basic -->
-    <div id="aws-portfolio" class="ex-basic-1 pt-5 pb-5 bg-gray1">
+    <div id="accordion-portfolio" class="ex-basic-1 pt-5 pb-5 bg-gray1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>AWS Cloud-basierte Portfolio-Website mit ChatGPT-Integration</h2>
                     <p>Dieses Projekt beinhaltet die Infrastruktur als Code (IaC), die notwendig ist, um eine persönliche Portfolio-Website auf AWS bereitzustellen. Es nutzt eine Reihe von AWS-Diensten und integriert eine Echtzeit-Chat-Oberfläche, die von OpenAIs ChatGPT unterstützt wird.</p>
                     <img class="img-fluid img-darkened mt-5 mb-3" src="../images/portfolio_webs_infrastructure.png" alt="Bild der Portfolio-Website-Infrastruktur">
-                    
-                    <h3>Überblick</h3>
-                    <p>Die Portfolio-Website zeigt nicht nur Arbeiten, sondern enthält auch ein Kontaktformular und eine Echtzeit-Chat-Oberfläche. Beide Funktionen werden über AWS-Dienste realisiert und bieten eine serverlose, skalierbare und sichere Lösung. Insbesondere unterstützt die Website sowohl 'www' als auch non-www-Weiterleitungen durch einen separaten S3-Bucket und eine CloudFront-Distribution. Alle Buckets sind privat, und der Zugriff ist auf bestimmte Identitäten und Rollen beschränkt.</p>
-                    <h3>Datenschutz und Implementierung</h3>
-                    <p>Das Design der Website priorisiert den Datenschutz der Benutzer, wobei während der Nutzung der Seite keine Cookies gespeichert werden. Dies stellt sicher, dass Benutzerdaten geschützt und DSGVO-konform sind. Technisch wird das Frontend der Website in einem Amazon S3-Bucket gehostet, während ein separater S3-Bucket die Weiterleitung von 'www' und non-'www'-Traffic verwaltet. Alle Buckets sind privat und nur über bestimmte Zugriffsidentitäten und -rollen zugänglich. Die Website nutzt AWS-Dienste für Funktionen wie E-Mail-Weiterleitung und Chatbot-Betrieb.</p>
-                    <h3>Architektur</h3>
-                    <p>Die Architektur umfasst die folgenden AWS-Dienste:</p>
-                    <ul>
-                    <li><strong>S3-Buckets:</strong> Hostet die statische Website und verwaltet Weiterleitungen.</li>
-                    <li><strong>CloudFront-Distributionen:</strong> Dienen der Inhaltsauslieferung, dem Caching und der HTTPS-Anfragen-Verarbeitung.</li>
-                    <li><strong>Route 53:</strong> Verknüpft Domainnamen mit den jeweiligen Ressourcen.</li>
-                    <li><strong>API Gateway:</strong> Löst die Lambda-Funktion entsprechend dem Ressource-Pfad der Anfrage aus.</li>
-                    <li><strong>Lambda-Funktionen:</strong> Handhabt Chat-Interaktionen (über ChatGPT-Integration) und leitet E-Mails weiter.</li>
-                    <li><strong>SES (Simple Email Service):</strong> Ermöglicht die E-Mail-Weiterleitung vom Kontaktformular zu einem persönlichen E-Mail-Konto.</li>
-                    <li><strong>Secrets Manager:</strong> Schützt den ChatGPT API-Schlüssel.</li>
-                    </ul>
-                    <p>Den zugehörigen Terraform-Code finden Sie in diesem <a class="blue" href="https://github.com/d-wrede/AWS_capstone_project" target="_blank">GitHub Repository</a>.</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of basic -->
+
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapsePortfolio" aria-expanded="false"
+                                aria-controls="collapsePortfolio"
+                                onclick="toggleText(this)"
+                                data-text-open="mehr" data-text-close="weniger">
+                            mehr
+                        </button>
+                    </h5>
+
+                    <div id="collapsePortfolio" class="collapse" aria-labelledby="headingPortfolio" data-parent="#accordion-portfolio">
+                        <h3>Überblick</h3>
+                        <p>Die Portfolio-Website zeigt nicht nur Arbeiten, sondern enthält auch ein Kontaktformular und eine Echtzeit-Chat-Oberfläche. Beide Funktionen werden über AWS-Dienste realisiert und bieten eine serverlose, skalierbare und sichere Lösung. Insbesondere unterstützt die Website sowohl 'www' als auch non-www-Weiterleitungen durch einen separaten S3-Bucket und eine CloudFront-Distribution. Alle Buckets sind privat, und der Zugriff ist auf bestimmte Identitäten und Rollen beschränkt.</p>
+
+                        <h3>Datenschutz und Implementierung</h3>
+                        <p>Das Design der Website priorisiert den Datenschutz der Benutzer, wobei während der Nutzung der Seite keine Cookies gespeichert werden. Dies stellt sicher, dass Benutzerdaten geschützt und DSGVO-konform sind. Technisch wird das Frontend der Website in einem Amazon S3-Bucket gehostet, während ein separater S3-Bucket die Weiterleitung von 'www' und non-'www'-Traffic verwaltet. Alle Buckets sind privat und nur über bestimmte Zugriffsidentitäten und -rollen zugänglich. Die Website nutzt AWS-Dienste für Funktionen wie E-Mail-Weiterleitung und Chatbot-Betrieb.</p>
+
+                        <h3>Architektur</h3>
+                        <p>Die Architektur umfasst die folgenden AWS-Dienste:</p>
+                        <ul>
+                            <li><strong>S3-Buckets:</strong> Hostet die statische Website und verwaltet Weiterleitungen.</li>
+                            <li><strong>CloudFront-Distributionen:</strong> Dienen der Inhaltsauslieferung, dem Caching und der HTTPS-Anfragen-Verarbeitung.</li>
+                            <li><strong>Route 53:</strong> Verknüpft Domainnamen mit den jeweiligen Ressourcen.</li>
+                            <li><strong>API Gateway:</strong> Löst die Lambda-Funktion entsprechend dem Ressource-Pfad der Anfrage aus.</li>
+                            <li><strong>Lambda-Funktionen:</strong> Handhabt Chat-Interaktionen (über ChatGPT-Integration) und leitet E-Mails weiter.</li>
+                            <li><strong>SES (Simple Email Service):</strong> Ermöglicht die E-Mail-Weiterleitung vom Kontaktformular zu einem persönlichen E-Mail-Konto.</li>
+                            <li><strong>Secrets Manager:</strong> Schützt den ChatGPT API-Schlüssel.</li>
+                        </ul>
+                        <p>Den zugehörigen Terraform-Code finden Sie in diesem <a class="blue" href="https://github.com/d-wrede/AWS_capstone_project" target="_blank">GitHub Repository</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Basic -->
     <div id="portfo_front" class="ex-basic-1 pt-5 pb-5 bg-gray2">

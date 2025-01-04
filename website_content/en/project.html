@@ -134,41 +134,174 @@
     </header> <!-- end of ex-header -->
     <!-- end of header -->
 
+    <div id="accordion-energy" class="ex-basic-1 pt-5 pb-5 bg-gray2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Energy Concept Sonnenwald Community</h2>
+                    <p>Conceptual design of a sustainable energy supply for a plant with 900 kW thermal output</p>
+                    <h3>Project Scope</h3>
+                    <p>The Sonnenwald community, consisting of approximately 70 residents, developed an energy concept aimed at reducing CO₂ emissions and lowering costs. The community is located in Schernbach in the northern Black Forest and is divided into two areas:</p>
+                    <ul>
+                        <li><strong>Upper Farm:</strong> Main part of the residential buildings, industrial kitchen, gymnasium, workshops, former swimming pool, and an existing district heating network.</li>
+                        <li><strong>Lower Farm:</strong> Two residential buildings (one used for seminars), as well as unused, unheated barns and agricultural buildings.</li>
+                    </ul>
 
-    <!-- Basic -->
-    <div id="aws-portfolio" class="ex-basic-1 pt-5 pb-5 bg-gray2">
+                    <div style="text-align: center;">
+                        <img style="width: 100%; height: auto; margin: 15px;" src="../images/uebersicht_gemeinsame_versorgung.png" alt="Scenario 1: Shared Supply">
+                        <p style="font-size: 14px; color: #555;">Figure 1: Scenario 1 – Shared Supply. Created based on a thesis by Daniel Schaake.</p>
+                    </div>
+
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapseEnergy" aria-expanded="false"
+                                aria-controls="collapseEnergy"
+                                onclick="toggleText(this)"
+                                data-text-open="read more" data-text-close="read less">
+                            read more
+                        </button>
+                    </h5>
+
+                    <div id="collapseEnergy" class="collapse" aria-labelledby="headingEnergy" data-parent="#accordion-energy">
+                        <h3>Initial Situation</h3>
+                        <p>The previous heat supply was based on a central 900 kW oil heating system at the Upper Farm and decentralized oil heaters at the Lower Farm. The goal was to develop a sustainable alternative. The analysis showed that wood chips were the most ecologically viable energy source. Options such as energy wood from the forest or paper sludge were excluded due to technical challenges. Photovoltaic surfaces were limited.</p>
+
+                        <h3>Energy Supply Scenarios</h3>
+                        <p>As part of the SmartBioGrid research project (TU Dresden, Institute of Power Engineering), two scenarios were examined:</p>
+                        <h4>1. Scenario 1 – Shared Supply</h4>
+                        <ul>
+                            <li>Heating center at the Lower Farm</li>
+                            <li>Heat pipeline to the Upper Farm</li>
+                            <li>Use of PV surfaces at the Lower Farm</li>
+                            <li>Advantages: centralized energy supply, optimized land use</li>
+                            <li>Disadvantages: heat losses, construction effort for heat and electricity pipelines</li>
+                        </ul>
+                        <h4>2. Scenario 2 – Separate Supply</h4>
+                        <ul>
+                            <li>Heating center at the Upper Farm for the existing district heating network</li>
+                            <li>Pellet heating for the Lower Farm</li>
+                            <li>Advantages: decentralized supply, less construction effort</li>
+                            <li>Disadvantages: limited space at the Upper Farm</li>
+                        </ul>
+
+                        <h3>Technologies Compared</h3>
+                        <ul>
+                            <li>Wood chip heating</li>
+                            <li>Heat storage for Upper and Lower Farms</li>
+                            <li>Heat pump</li>
+                            <li>Additional PV systems (depending on scenario)</li>
+                            <li>Pellet heating (only for separate supply)</li>
+                        </ul>
+                        <p>Optimization was carried out using the FlixOpt optimization framework (TU Dresden).</p>
+
+                        <div style="text-align: center;">
+                            <img style="width: 80%; height: auto; margin: 15px;" src="../images/energieversorgungssystem.png" alt="Energy Supply System">
+                            <p style="font-size: 14px; color: #555;">Figure 2: Energy Supply System. Source: TU Dresden, FlixOpt (<a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/flixopt" target="_blank">Link to source</a>).</p>
+                        </div>
+
+                        <h3>Results</h3>
+                        <p>The optimization results for Scenario 1 and Scenario 2 are shown in the figure below. Both scenarios rely on a combination of a combined heat and power unit (CHP) and a heat pump.</p>
+                        <ul>
+                            <li><strong>Scenario 2 – Separate Supply:</strong> The buildings at the Lower Farm are each equipped with a pellet heater.</li>
+                            <li><strong>Scenario 1 – Shared Supply:</strong> The PV surfaces of the Lower Farm are extensively used to provide the generated electricity for the heat pump and other consumers at the Upper Farm.</li>
+                        </ul>
+                        <p>The available PV surfaces were only partially used and installed exclusively in a southern orientation in both variants.</p>
+
+                        <div style="text-align: center;">
+                            <img style="width: 80%; height: auto; margin: 15px;" src="../images/vergleich_technologien.png" alt="Technology Comparison">
+                            <p style="font-size: 14px; color: #555;">Figure 3: Technology Comparison. Created based on calculation results in Excel.</p>
+                        </div>
+
+                        <h3>Decision of the Sonnenwald Community</h3>
+                        <p>Due to comparable costs, less construction effort, and bureaucratic hurdles for the heat and electricity pipelines, the community decided on Scenario 2 – Separate Supply.</p>
+                        <table class="table table-striped mt-4">
+                            <thead>
+                            <tr>
+                                <th>Cost Type</th>
+                                <th>Scenario 1 – Shared</th>
+                                <th>Scenario 2 – Separate</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Investment Costs</td>
+                                <td>€42,965</td>
+                                <td>€34,913</td>
+                            </tr>
+                            <tr>
+                                <td>Operating Costs</td>
+                                <td>€64,620</td>
+                                <td>€69,093</td>
+                            </tr>
+                            <tr>
+                                <td>Total Costs</td>
+                                <td>€107,585</td>
+                                <td>€104,006</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Reasons for the small differences:</strong></p>
+                        <ul>
+                            <li>Heat losses in the pipeline between the farms</li>
+                            <li>Higher construction effort in Scenario 1</li>
+                            <li>PV use at the Lower Farm was omitted in Scenario 1</li>
+                        </ul>
+
+                        <p>Further information and detailed results are available in the project report by TU Dresden: <a href="https://tu-dresden.de/ing/maschinenwesen/iet/gewv/forschung/forschungsprojekte/smart_bio_grid" target="_blank">SmartBioGrid</a>.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="accordion-portfolio" class="ex-basic-1 pt-5 pb-5 bg-gray1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>AWS Cloud-Based Portfolio Website with ChatGPT Integration</h2>
                     <p>This project houses the Infrastructure as Code (IaC) necessary for deploying a personal portfolio website on AWS. It employs an array of AWS services and incorporates a real-time chat interface powered by OpenAI's ChatGPT.</p>
-                    <!-- <img class="img-fluid mt-5 mb-3" src="../images/portfolio_webs_infrastructure.png" alt="image of portfolio website infrastructure"> -->
                     <img class="img-fluid img-darkened mt-5 mb-3" src="../images/portfolio_webs_infrastructure.png" alt="image of portfolio website infrastructure">
-                    
-                    <h3>Overview</h3>
-                    <p>The portfolio website, aside from showcasing work, includes a contact form and a real-time chat interface. Both functionalities are achieved through AWS services, providing a serverless, scalable, and secure solution. Notably, the website caters to both 'www' and non-www redirections through a separate S3 bucket and CloudFront distribution. All buckets are private, with access limited to specific identities and roles.</p>
-                    <h3>Privacy and Implementation</h3>
-                    <p>The design of the website prioritizes user privacy, with no cookies being stored during site usage. This ensures user data privacy and GDPR compliance. Technically, the website's frontend is hosted on an Amazon S3 bucket, with a separate S3 bucket managing redirection for 'www' and non-'www' traffic. All buckets are private and accessible only via specific access identities and roles. The website utilizes AWS services for functionalities like email forwarding and chatbot operation.</p>
-                    <h3>Architecture</h3>
-                    <p>The architecture comprises the following AWS services:</p>
-                    <ul>
-                    <li><strong>S3 Buckets:</strong> Host the static website and manage redirections.</li>
-                    <li><strong>CloudFront Distributions:</strong> Cater to content delivery, caching, and HTTPS requests.</li>
-                    <li><strong>Route 53:</strong> Links domain names to the respective resources.</li>
-                    <li><strong>API Gateway:</strong> Triggers the Lambda function corresponding to the request's resource path.</li>
-                    <li><strong>Lambda Functions:</strong> Handles chat interactions (via ChatGPT integration) and forwards emails.</li>
-                    <li><strong>SES (Simple Email Service):</strong> Facilitates email forwarding from the contact form to a personal email account.</li>
-                    <li><strong>Secrets Manager:</strong> Safeguards the ChatGPT API key.</li>
-                    </ul>
-                    <p>You can access the associated Terraform code in this <a class="blue" href="https://github.com/d-wrede/AWS_capstone_project" target="_blank">GitHub repository</a>.</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-1 -->
-    <!-- end of basic -->
+
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapsePortfolio" aria-expanded="false"
+                                aria-controls="collapsePortfolio"
+                                onclick="toggleText(this)"
+                                data-text-open="read more" data-text-close="read less">
+                            read more
+                        </button>
+                    </h5>
+
+                    <div id="collapsePortfolio" class="collapse" aria-labelledby="headingPortfolio" data-parent="#accordion-portfolio">
+                        <h3>Overview</h3>
+                        <p>The portfolio website, aside from showcasing work, includes a contact form and a real-time chat interface. Both functionalities are achieved through AWS services, providing a serverless, scalable, and secure solution. Notably, the website caters to both 'www' and non-www redirections through a separate S3 bucket and CloudFront distribution. All buckets are private, with access limited to specific identities and roles.</p>
+
+                        <h3>Privacy and Implementation</h3>
+                        <p>The design of the website prioritizes user privacy, with no cookies being stored during site usage. This ensures user data privacy and GDPR compliance. Technically, the website's frontend is hosted on an Amazon S3 bucket, with a separate S3 bucket managing redirection for 'www' and non-'www' traffic. All buckets are private and accessible only via specific access identities and roles. The website utilizes AWS services for functionalities like email forwarding and chatbot operation.</p>
+
+                        <h3>Architecture</h3>
+                        <p>The architecture comprises the following AWS services:</p>
+                        <ul>
+                            <li><strong>S3 Buckets:</strong> Host the static website and manage redirections.</li>
+                            <li><strong>CloudFront Distributions:</strong> Cater to content delivery, caching, and HTTPS requests.</li>
+                            <li><strong>Route 53:</strong> Links domain names to the respective resources.</li>
+                            <li><strong>API Gateway:</strong> Triggers the Lambda function corresponding to the request's resource path.</li>
+                            <li><strong>Lambda Functions:</strong> Handles chat interactions (via ChatGPT integration) and forwards emails.</li>
+                            <li><strong>SES (Simple Email Service):</strong> Facilitates email forwarding from the contact form to a personal email account.</li>
+                            <li><strong>Secrets Manager:</strong> Safeguards the ChatGPT API key.</li>
+                        </ul>
+                        <p>You can access the associated Terraform code in this <a class="blue" href="https://github.com/d-wrede/AWS_capstone_project" target="_blank">GitHub repository</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Basic -->
-    <div id="portfo_front" class="ex-basic-1 pt-5 pb-5 bg-gray1">
+    <div id="portfo_front" class="ex-basic-1 pt-5 pb-5 bg-gray2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

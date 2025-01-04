@@ -122,7 +122,8 @@ h3 {
 	font-weight: 700;
 	font-size: 1.75rem;
 	line-height: 2.25rem;
-	font-family: "Poppins"
+	font-family: "Poppins";
+	margin-top: 2rem;
 }
 
 h4 {
