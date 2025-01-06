@@ -108,3 +108,16 @@ function toggleText(button) {
     // Toggle Text zwischen open und close
     button.innerText = button.innerText === textOpen ? textClose : textOpen;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the reversed email text
+    var emailSpan = document.getElementById("email");
+    var reversedEmail = emailSpan.textContent.trim(); // Trim whitespace from the span
+
+    // Reverse the email to get the actual address
+    var actualEmail = reversedEmail.split("").reverse().join("");
+
+    // Get the <a> tag and set its href to the correct mailto link
+    var emailLink = document.getElementById("email-link");
+    emailLink.href = "mailto:" + actualEmail;
+});
