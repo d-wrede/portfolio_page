@@ -121,3 +121,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var emailLink = document.getElementById("email-link");
     emailLink.href = "mailto:" + actualEmail;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Store the scroll position before switching language
+    const switchDe = document.getElementById("switch-de");
+    const switchEn = document.getElementById("switch-en");
+
+    function storeScrollPosition() {
+        const scrollPosition = window.scrollY;
+        sessionStorage.setItem("scrollPosition", scrollPosition);
+    }
+
+    if (switchDe) switchDe.addEventListener("click", storeScrollPosition);
+    if (switchEn) switchEn.addEventListener("click", storeScrollPosition);
+
+    // Restore the scroll position on the new page
+    const savedPosition = sessionStorage.getItem("scrollPosition");
+    if (savedPosition !== null) {
+        window.scrollTo(0, parseInt(savedPosition, 10));
+        sessionStorage.removeItem("scrollPosition"); // Clear it after use
+    }
+});
+
