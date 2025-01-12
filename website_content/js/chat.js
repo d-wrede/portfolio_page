@@ -46,17 +46,24 @@ msgerForm.addEventListener("submit", event => {
   appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
   msgerInput.value = "";
 
-  const tempMessage = "Sending your message...";
+  // Determine language from the document's lang attribute
+  const lang = document.documentElement.lang || "en";
+
+  const tempMessage =
+      lang === "de"
+        ? "Ihre Nachricht wird gesendet..."
+        : "Sending your message...";
+
+  // const tempMessage = "Sending your message...";
   const tempMessageId = "tempMessage";
   appendMessage(BOT_NAME, BOT_IMG, "left", tempMessage, tempMessageId);
 
   // Save to sessionStorage (done in appendMessage)
-  sendToAPIGateway(msgText);
+  sendToAPIGateway(msgText, tempMessageId);
 });
 
 
-// Applying AWS API Gateway with Lambda function
-function sendToAPIGateway(msgText) {
+function sendToAPIGateway(msgText, tempMessageId) {
   const chatApiGatewayUrl = 'https://zlxbi3wpcj.execute-api.eu-central-1.amazonaws.com/chat_api_stage/chat';
   const uuid = sessionStorage.getItem('uuid') || crypto.randomUUID(); // Retrieve UUID or generate a new one if not found
   sessionStorage.setItem('uuid', uuid); // Save the UUID to sessionStorage
@@ -68,24 +75,34 @@ function sendToAPIGateway(msgText) {
     contentType: 'application/x-www-form-urlencoded; charset=utf-8',
     dataType: 'json', //'json'/'text'
     success: function(response) {
-      appendMessage(BOT_NAME, BOT_IMG, 'left', response.message);
+      // Append the actual GPT message
+      appendMessage(BOT_NAME, BOT_IMG, "left", response.message);
+
+      // Remove the temporary message
       const tempMessageElement = document.getElementById(tempMessageId);
       if (tempMessageElement) tempMessageElement.remove();
     },
     error: function(error) {
       console.error('Error:', error);
+
+      // Optionally remove the temporary message on error
+      const tempMessageElement = document.getElementById(tempMessageId);
+      if (tempMessageElement) tempMessageElement.remove();
     }
   });
 }
 
 
 function appendMessage(name, img, side, text, id) {
-  //call renderMessage():
+  // Render the message
   renderMessage(name, img, side, text, id);
 
-  // Save the message to sessionStorage
-  saveMessageToSessionStorage({ name, img, side, text });
+  // Save to sessionStorage only if it's not a temporary message
+  if (!id || id !== "tempMessage") {
+    saveMessageToSessionStorage({ name, img, side, text });
+  }
 }
+
 
 function saveMessageToSessionStorage(message) {
   const chatHistory = JSON.parse(sessionStorage.getItem('chatHistory')) || [];
@@ -134,10 +151,10 @@ function loadChatHistory(lang) {
     const welcomeText =
       lang === "de"
         ? "Hallo und willkommen! Ich bin der persönliche Portfolio-Agent auf dieser Seite. " +
-          "Ich nehme an, dass Sie an Daniels Profil interessiert sind. Wie kann ich Ihnen helfen, " +
-          "mehr über Daniel zu erfahren und seine Eignung für Ihre Anforderungen zu beurteilen?"
+          "Ich nehme an, dass Sie an Daniel Wredes Profil interessiert sind. Wie kann ich Ihnen helfen, " +
+          "mehr über Daniel Wrede zu erfahren und seine Eignung für Ihre Anforderungen zu beurteilen?"
         : "Hello and welcome! I am the personal Portfolio Agent on this page. " +
-          "How can I help you learn more about Daniel and assess his suitability for your requirements?";
+          "How can I help you learn more about Daniel Wrede and assess his suitability for your requirements?";
     appendMessage("Portfolio Agent", "../images/ChatGPT_logo.png", "left", welcomeText);
   } else{
     msgerChat.innerHTML = "";

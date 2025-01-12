@@ -164,7 +164,7 @@ h6 {
 }
 
 .dark-font {
-    color: var(--color-grey);
+    color: var(--color-gray);
 	/* #4d5055; */
 }
 
@@ -183,13 +183,13 @@ h6 {
 }
 
 a {
-	color: var(--color-grey); 
+	color: var(--color-gray); 
 	/* #4d5055; */
 	text-decoration: underline;
 }
 
 a:hover {
-	color: var(--color-grey);
+	color: var(--color-gray);
 	text-decoration: underline;
 }
 
