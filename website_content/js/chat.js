@@ -5,7 +5,7 @@
  */
 
 // Icons made by Freepik from www.flaticon.com
-const BOT_IMG = "images/ChatGPT_logo.png";
+const BOT_IMG = "../images/ChatGPT_logo.png";
 const PERSON_IMG = "find a logo";
 const BOT_NAME = "ChatGPT Portfolio Agent";
 const PERSON_NAME = "you";
@@ -50,9 +50,11 @@ msgerForm.addEventListener("submit", event => {
   const tempMessageId = "tempMessage";
   appendMessage(BOT_NAME, BOT_IMG, "left", tempMessage, tempMessageId);
 
+  // Save to sessionStorage (done in appendMessage)
   sendToAPIGateway(msgText);
 });
-// });
+
+
 // Applying AWS API Gateway with Lambda function
 function sendToAPIGateway(msgText) {
   const chatApiGatewayUrl = 'https://zlxbi3wpcj.execute-api.eu-central-1.amazonaws.com/chat_api_stage/chat';
@@ -75,46 +77,36 @@ function sendToAPIGateway(msgText) {
     }
   });
 }
-// curl -X POST -H "Content-Type: text/plain; charset=utf-8" -H "Origin: https://www.daniel-wrede.de" -d "Your message text here" 'https://jk348hof93.execute-api.eu-central-1.amazonaws.com/chat_api_stage/message'
 
-
-// function appendMessage(name, img, side, text) {
-//   //   Simple solution for small apps
-//   const msgHTML = `
-//     <div class="msg ${side}-msg">
-//       <div class="msg-img" style="background-image: url(${img})"></div>
-
-//       <div class="msg-bubble">
-//         <div class="msg-info">
-//           <div class="msg-info-name">${name}</div>
-//           <div class="msg-info-time">${formatDate(new Date())}</div>
-//         </div>
-
-//         <div class="msg-text">${text}</div>
-//       </div>
-//     </div>
-//   `;
-
-//   msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-//   msgerChat.scrollTop += 500;
-// }
 
 function appendMessage(name, img, side, text, id) {
+  //call renderMessage():
+  renderMessage(name, img, side, text, id);
+
+  // Save the message to sessionStorage
+  saveMessageToSessionStorage({ name, img, side, text });
+}
+
+function saveMessageToSessionStorage(message) {
+  const chatHistory = JSON.parse(sessionStorage.getItem('chatHistory')) || [];
+  chatHistory.push(message);
+  sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+}
+
+
+function renderMessage(name, img, side, text, id) {
   const msgHTML = `
     <div class="msg ${side}-msg dark-font" id="${id || ''}">
       <div class="msg-img dark-font" style="background-image: url(${img})"></div>
-
       <div class="msg-bubble">
         <div class="msg-info">
           <div class="msg-info-name dark-font">${name}</div>
           <div class="msg-info-time dark-font">${formatDate(new Date())}</div>
         </div>
-
         <div class="msg-text dark-font">${text}</div>
       </div>
     </div>
   `;
-
   msgerChat.insertAdjacentHTML("beforeend", msgHTML);
   msgerChat.scrollTop += 500;
 }
@@ -136,37 +128,44 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-
-/* Popup Chat Window */
-
-// function openForm() {
-//   document.getElementById("myForm").style.display = "block";
-// }
-
-// function closeForm() {
-//   document.getElementById("myForm").style.display = "none";
-// }
-
-// function toggleForm() {
-//   const form = document.getElementById("myForm");
-//   if (form.style.display === "none" || form.style.display === "") {
-//     form.style.display = "block";
-//   } else {
-//     form.style.display = "none";
-//   }
-// }
+function loadChatHistory(lang) {
+  const chatHistory = JSON.parse(sessionStorage.getItem('chatHistory')) || [];
+  if (!chatHistory.length) {
+    const welcomeText =
+      lang === "de"
+        ? "Hallo und willkommen! Ich bin der persönliche Portfolio-Agent auf dieser Seite. " +
+          "Ich nehme an, dass Sie an Daniels Profil interessiert sind. Wie kann ich Ihnen helfen, " +
+          "mehr über Daniel zu erfahren und seine Eignung für Ihre Anforderungen zu beurteilen?"
+        : "Hello and welcome! I am the personal Portfolio Agent on this page. " +
+          "How can I help you learn more about Daniel and assess his suitability for your requirements?";
+    appendMessage("Portfolio Agent", "../images/ChatGPT_logo.png", "left", welcomeText);
+  } else{
+    msgerChat.innerHTML = "";
+    chatHistory.forEach(msg => {
+      renderMessage(msg.name, msg.img, msg.side, msg.text);
+    });
+  }
+}
 
 function toggleForm() {
   const form = document.getElementById("myForm");
   const toggleButton = document.getElementById("toggleButton");
 
+  const closeText = toggleButton.getAttribute("data-close-text") || "Close";
+  const chatText = toggleButton.getAttribute("data-chat-text") || "Chat";
+
   if (form.style.display === "none" || form.style.display === "") {
     form.style.display = "block";
-    toggleButton.textContent = "Close";
+    toggleButton.textContent = closeText;
     toggleButton.classList.add("opened");
+
+    // Determine language from the document's lang attribute
+    const lang = document.documentElement.lang || "en";
+    // Load chat history into the chat window
+    loadChatHistory(lang);
   } else {
     form.style.display = "none";
-    toggleButton.textContent = "Chat";
+    toggleButton.textContent = chatText;
     toggleButton.classList.remove("opened");
   }
 }

@@ -115,6 +115,31 @@
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
+    <!-- Chat popup form -->
+    <section class="chat-popup form-popup" id="myForm">
+        <!-- Disclaimer Overlay -->
+        <div id="disclaimer" class="disclaimer-overlay">
+            <div class="disclaimer-content">
+                <p class="dark-font">Conversations will be logged for quality assurance model training purposes.</p>
+                <button id="disclaimer-accept">OK</button>
+            </div>
+        </div>
+        <div class="msger-header">
+            <div class="msger-header-title">
+                <i class="fas fa-comment-alt"></i> OpenAI's chatGPT-4o mini
+            </div>
+        </div>
+        <div class="msger-chat">
+        </div>
+        <form class="msger-inputarea">
+            <input type="text" class="msger-input" placeholder="Enter your message...">
+            <button type="submit" class="msger-send-btn">Send</button>
+        </form>
+    </section>
+    <!-- Open/close chat button -->
+    <button onclick="toggleForm()" class="open-button" id="toggleButton" data-close-text="Close" data-chat-text="Chat">Chat</button>
+    <!-- end of chat popup interface -->
+
 
     <!-- Header -->
     <header class="ex-header bg-gray1">

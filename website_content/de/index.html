@@ -113,13 +113,36 @@
                 </label>
                 <label class="theme-label nav-link" id="dark-label" href="#">Dunkel</label> <!-- Add label for -->
             </div>
-
-
         </div> <!-- end of navbar-collapse -->
     </div> <!-- end of container -->
 </nav> <!-- end of navbar -->
 <!-- end of navigation -->
 
+<!-- Chat popup form -->
+<section class="chat-popup form-popup" id="myForm">
+    <!-- Disclaimer Overlay -->
+    <div id="disclaimer" class="disclaimer-overlay">
+        <div class="disclaimer-content">
+            <p class="dark-font">Gespräche werden für Qualitätssicherung und Trainingszwecke protokolliert.</p>
+            <button id="disclaimer-accept">OK</button>
+        </div>
+    </div>
+    <div class="msger-header">
+        <div class="msger-header-title">
+            <i class="fas fa-comment-alt"></i> OpenAI's chatGPT-4o mini
+        </div>
+    </div>
+
+    <div class="msger-chat">
+    </div>
+    <form class="msger-inputarea">
+        <input type="text" class="msger-input" placeholder="Nachricht eingeben...">
+        <button type="submit" class="msger-send-btn">Senden</button>
+    </form>
+</section>
+<!-- Open/close chat button -->
+<button onclick="toggleForm()" class="open-button" id="toggleButton" data-close-text="Schließen" data-chat-text="Chat">Chat</button>
+<!-- end of chat popup interface -->
 
 <!-- Header -->
 <header id="header" class="header">
@@ -150,58 +173,6 @@
     </div> <!-- end of container -->
 </header> <!-- end of header -->
 <!-- end of header -->
-
-
-<!-- Chat popup form -->
-<section class="chat-popup form-popup" id="myForm">
-    <!-- Disclaimer Overlay -->
-    <div id="disclaimer" class="disclaimer-overlay">
-        <div class="disclaimer-content">
-            <p class="dark-font">Gespräche werden für Qualitätssicherung und Trainingszwecke protokolliert.</p>
-            <button id="disclaimer-accept">OK</button>
-        </div>
-    </div>
-    <!-- <div class="form-container">
-    <section class="msger"> -->
-    <div class="msger-header">
-        <div class="msger-header-title">
-            <i class="fas fa-comment-alt"></i> OpenAI's chatGPT-4o mini
-        </div>
-        <!-- <div class="msger-header-options">
-                    <span><i class="fas fa-cog"></i></span>
-                </div> -->
-    </div>
-
-    <div class="msger-chat">
-        <div class="msg left-msg">
-            <div class="msg-img" style="background-image: url('../images/ChatGPT_logo.png')">
-            </div>
-
-            <div class="msg-bubble">
-                <div class="msg-info">
-                    <div class="msg-info-name dark-font">Portfolio Agent</div>
-                    <div id="time" class="msg-info-time dark-font">12:45</div>
-                </div>
-
-                <div class="msg-text dark-font">
-                    Hallo und willkommen! Ich bin der persönliche Portfolio-Agent auf dieser Seite. Ich nehme an, dass
-                    Sie an Daniels Profil interessiert sind. Wie kann ich Ihnen helfen, mehr über Daniel zu erfahren und
-                    seine Eignung für Ihre Bedürfnisse zu beurteilen?
-                </div>
-            </div>
-        </div>
-    </div>
-    <form class="msger-inputarea">
-        <input type="text" class="msger-input" placeholder="Nachricht eingeben...">
-        <button type="submit" class="msger-send-btn">Senden</button>
-    </form>
-    <!-- </section>
-    </div> -->
-</section>
-<!-- Open/close chat button -->
-<button onclick="toggleForm()" class="open-button" id="toggleButton">Chat</button>
-
-<!-- end of chat popup interface -->
 
 <div id="about" class="basic-1 bg-gray2">
     <div class="container">
